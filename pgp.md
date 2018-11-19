@@ -4,7 +4,7 @@ title: PGP Keys
 permalink: /pgp/
 ---
 
-## rafael@ortiz.sh & rafael@ortizmail.cc
+# rafael@ortiz.sh
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v1
@@ -72,7 +72,7 @@ z/YM7Jy0XxmCC8tQi38O/jw7ZQ==
 -----END PGP PUBLIC KEY BLOCK-----
 ```
 
-## rafael@ortizmail.cc (on keybase)
+# rafael@ortizmail.cc
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
@@ -126,7 +126,7 @@ dLjfDRQ9ifCdLDStddKl8lwT9BeieDxSOoHsNzXvk1VKI3s1hzXOJMM6BMgJ2Q==
 -----END PGP PUBLIC KEY BLOCK-----
 ```
 
-## Keybase.io
+# Keybase.io/senicar
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Comment: https://keybase.io/senicar
