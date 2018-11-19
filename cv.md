@@ -31,7 +31,7 @@ Security Researcher @ ElevenPaths Buenos Aires Lab
 ```
 
 ```
-Owner and Operator @ Poolsloth VRM Cryptocurrency Mining Pool
+Operator @ Poolsloth VRM Cryptocurrency Mining Pool
 08/2017 - ongoing
 ```
 
