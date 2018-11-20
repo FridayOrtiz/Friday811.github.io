@@ -1,10 +1,13 @@
 ---
 layout: page
-title: PGP Keys
+title: PGP
 permalink: /pgp/
 ---
 
 # rafael@ortiz.sh
+
+[Direct Download]({{ site.url }}/download/pubkey.asc)
+
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v1
