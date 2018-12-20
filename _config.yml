@@ -18,7 +18,7 @@ email: rafael@ortiz.sh
 author: Rafael Ortiz
 description: This site is where I put notes, projects, CTF writeups, and other fun things.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://blog.ortiz.sh" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.ortiz.sh" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: PB_Friday
 github_username:  Friday811
 linkedin_username: rafael-ortiz
