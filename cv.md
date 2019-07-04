@@ -30,10 +30,10 @@ Security Researcher @ ElevenPaths Buenos Aires Lab
 10/2017 - ongoing
 ```
 
-```
-Operator @ Poolsloth VRM Cryptocurrency Mining Pool
-08/2017 - ongoing
-```
+
+
+
+
 
 ```
 Cybersecurity Sales Specialist @ Telefonica USA
@@ -41,6 +41,11 @@ Cybersecurity Sales Specialist @ Telefonica USA
 ```
 
 #### Past
+
+```
+Operator @ Poolsloth VRM Cryptocurrency Mining Pool
+08/2017 - 05/2019
+```
 
 ```
 Project Coordinator and IT Admin @ Specialty Telehealth Services
