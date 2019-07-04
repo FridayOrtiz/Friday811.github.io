@@ -71,6 +71,14 @@ Undergraduate Research Assistant @ Botchwey Lab, Georgia Tech
 
 #### Conferences & Speaking
 ```
+(2019) High assurance digital assets and identities for humans and machines:
+    building a trustworthy blockchain, Florida Blockchain Foundation Supply 
+    Chain Digital Transformation Session 2: Blockchain Technology for Air Travel
+    and Innovative concepts (2 July) 
+    https://fbf2019.angage.events/editablepage/view/411
+(2019) Blockchain in a real business, Florida Blockchain Foundation Digital 
+    Transformation Session 1: Blockchain 101 (28 May)
+    https://www.floridablockchainfoundation.org/events-1/supplychainworkshops
 (2018) Breaking out HSTS (and HPKP) on Firefox and Chrome, Hack Miami 6 (19 May)
     https://web.archive.org/web/20180530170414/https://www.hackmiami.com/speakers-hackmiami-conference-6
 ```
