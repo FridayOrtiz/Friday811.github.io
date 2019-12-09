@@ -30,13 +30,8 @@ Security Researcher @ ElevenPaths Buenos Aires Lab
 10/2017 - ongoing
 ```
 
-
-
-
-
-
 ```
-Cybersecurity Sales Specialist @ Telefonica USA
+Cybersecurity Specialist @ Telefonica USA
 02/2017 - ongoing
 ```
 
