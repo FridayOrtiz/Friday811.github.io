@@ -6,8 +6,9 @@ categories: flying
 ---
 
 TL;DR: Anecdotally, the best Switch games to play if you get mildly airsick.
+The winner is Diablo 3.
 
-# The backstory
+## The backstory
 
 When I was younger, I used to read every day on the trip to school. I got through
 countless books in rush hour traffic. The worse traffic was, the happier I'd be.
@@ -38,7 +39,7 @@ device could save me.
 Now that RSA 2020 is over I think I have enough data to make some 
 recommendations.
 
-# The criteria
+## The criteria
 
 For a game to be viable in flight it should meet a few criteria.
 
@@ -51,12 +52,12 @@ For a game to be viable in flight it should meet a few criteria.
  want to beat a level, reach a good stopping point, look up, and see we're still 
  lining up for takeoff.
 
-# The games
+## The games
 
 The following are all the games I own on my Nintendo Switch in order of
 "worst to play on a plane" to "best to play on a plane."
 
-## Super Mario Party
+### Super Mario Party
 
 This game just isn't much fun without a friend, so it's pretty useless to me
 when I'm flying alone. Additionally, the Switch won't let you 
@@ -71,7 +72,7 @@ Besides that, the game itself isn't too nausea inducing. If you've played
 a few parties already you can pretty much ignore all the text, roll your
 dice and play games. It's just not very fun solo.
 
-## Star Wars Jedi Knight II: Jedi Outcast
+### Star Wars Jedi Knight II: Jedi Outcast
 
 I love this game on PC. I have countless hours in it. I know all the levels
 by memory, and I used to know all the secret areas too. It's one of my favorite
@@ -88,7 +89,7 @@ to gently nudge and precisely aim with a thumbstick and no aim assist means
 focusing my eyes intensely at the screen. Intensely focusing my eyes means
 nausea. Nausea means no fun for anyone. Save this one for the hotel.
 
-## The Legend of Zelda: Breath of the Wild
+### The Legend of Zelda: Breath of the Wild
 
 This game is fantastic but unfortunately suffers from the same aiming problems
 as Jedi Outcast. Aiming isn't quite as terrible, but it's far better when you
@@ -108,7 +109,7 @@ downtime between shrines and dungeons loses my attention. There's also quite
 a bit of reading if you don't already have the game memorized. Great game,
 just not suitable here.
 
-## New Super Mario Bros. U Deluxe
+### New Super Mario Bros. U Deluxe
 
 Now we're getting into "actually playable" territory. The side scrolling nature
 and lack of text make it easy to play without focusing your eyes. It's easy
@@ -122,7 +123,7 @@ it's hard for this game to sustain my attention for 6+ consecutive hours.
 Definitely recommend having this one in the rotation, but you're going to
 want to have something else to do.
 
-## Untitled Goose Game
+### Untitled Goose Game
 
 For some reason infosec loves this game and I am no exception.
 This game is great for playing in the air with a few caveats. The big
@@ -134,7 +135,7 @@ The reliance on text is minimal, the game is impossible to lose so you
 never have a chance to stop or put it down, and it's overall a very fun and 
 light experience. Again, put this in the rotation but have something else to do.
 
-## Diablo 3: Eternal Collection
+### Diablo 3: Eternal Collection
 
 By far the best mobile gaming experience I've ever had. I'd even say this is
 my preferred way to play Diablo 3. This port makes the PC version look 
