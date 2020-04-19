@@ -21,6 +21,11 @@ Release:	19.10
 Codename:	eoan
 ```
 
+**Update 19 Apr, 2020:** Be careful with these instructions if
+you are also developing C projects that rely on `sodium.h`. Installing
+libsodium from git as described here will conflict with installing it from
+your distro's `libsodium23` and `libsodium-dev` packages.
+
 ## Background
 
 I was working on an Android application that required the use of libsodium's
