@@ -146,16 +146,12 @@ int unkillable_major = 117;
 
 int unkillable_init(void) 
 {
-	int result;
-
-	result = register_chrdev(unkillable_major, "unkillable", &unkillable_fops);
-	if (result < 0) {
+	if (register_chrdev(unkillable_major, "unkillable", &unkillable_fops) < 0 ) {
 		printk("Unkillable: cannot obtain major number %d\n", unkillable_major);
-		return result;
+		return 1;
 	}
 
 	printk("Inserting unkillable module\n"); 
-
 	return 0;
 }
 
