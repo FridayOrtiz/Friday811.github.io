@@ -60,8 +60,8 @@ but I wanted to create another user process which could not be killed.
 So how do we prove the Internet wrong (for this very specific case)? Let's look
 at what actually makes `init` unkillable. I'll spare you how I got here
 and skip right the point. First, we have to define `task_struct`.
-I recommending reading through the [kernel source](https://elixir.bootlin.com/linux/latest/source/include/linux/sched.h#L632),
-it's not too complex, but the gist is that [`task_struct` holds information about a process](https://stackoverflow.com/a/56538295)
+I recommend reading through the [kernel source](https://elixir.bootlin.com/linux/latest/source/include/linux/sched.h#L632),
+it's not too complex. The gist is that [`task_struct` holds information about a process](https://stackoverflow.com/a/56538295)
 for use by the kernel.
 
 [Further down](https://elixir.bootlin.com/linux/latest/source/include/linux/sched.h#L925)
