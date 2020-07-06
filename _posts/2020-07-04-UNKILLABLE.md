@@ -280,8 +280,6 @@ make[1]: Leaving directory '/usr/src/linux-headers-5.4.0-7634-generic'
 $ make mknod
 sudo mknod /dev/unkillable c 117 0
 sudo chmod 666 /dev/unkillable
-$ make uninstall
-sudo rmmod unkillable
 $ make install
 sudo insmod unkillable.ko
 $ 
