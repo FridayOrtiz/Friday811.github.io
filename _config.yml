@@ -18,13 +18,15 @@ email: rafael@ortiz.sh
 author: Rafael Ortiz
 description: This site is where I put notes on fun things I do between semesters.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.ortiz.sh" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://ortiz.sh" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: FridayOrtiz
 github_username:  Friday811
 linkedin_username: rafael-ortiz
 mastodon:
 - username: Senicar
   instance: infosec.exchange
+
+google_analytics: UA-172023923-1
 
 # Build settings
 markdown: kramdown
