@@ -28,6 +28,8 @@ mastodon:
 
 google_analytics: UA-172023923-1
 
+future: false
+
 # Build settings
 markdown: kramdown
 theme: minima
