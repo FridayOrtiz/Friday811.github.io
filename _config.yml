@@ -30,11 +30,15 @@ google_analytics: UA-172023923-1
 
 future: false
 
+paginate: 5
+paginate_path: "posts/page:num/"
+
 # Build settings
 markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 
 show_excerpts: true
 
