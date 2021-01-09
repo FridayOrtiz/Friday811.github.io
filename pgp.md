@@ -1,10 +1,31 @@
 ---
 layout: page
-title: PGP
-permalink: /pgp/
+title: Contact Me
+permalink: /contact/
 ---
 
-# rafael@ortiz.sh
+rafael@ortiz.sh
+
+rafael.a.ortiz@protonmail.com
+
+@Senicar on Wire
+
+Senicar on [Freenode](https://freenode.net/), [2600](https://www.2600.com/), and [OFTC](https://www.oftc.net/)
+
+[Senicar on Keybase](https://keybase.io/senicar)
+
+[FridayOrtiz on Twitter](https://twitter.com/FridayOrtiz)
+
+[Friday811 on GitHub](https://github.com/Friday811)
+
+[senicar@infosec.exchange](https://infosec.exchange/@senicar)
+
+Senicar#7020 on Discord
+
+[Senicar on Reddit](https://reddit.com/user/senicar)
+
+# PGP Keys
+## rafael@ortiz.sh
 
 [Direct Download]({{ site.url }}/download/pubkey.asc)
 
@@ -75,7 +96,7 @@ z/YM7Jy0XxmCC8tQi38O/jw7ZQ==
 -----END PGP PUBLIC KEY BLOCK-----
 ```
 
-# rafael@ortizmail.cc
+## rafael@ortizmail.cc
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
@@ -129,7 +150,7 @@ dLjfDRQ9ifCdLDStddKl8lwT9BeieDxSOoHsNzXvk1VKI3s1hzXOJMM6BMgJ2Q==
 -----END PGP PUBLIC KEY BLOCK-----
 ```
 
-# Keybase.io/senicar
+## Keybase.io/senicar
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Comment: https://keybase.io/senicar
