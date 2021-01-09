@@ -4,25 +4,20 @@ title: Contact Me
 permalink: /contact/
 ---
 
-rafael@ortiz.sh
+Here's where you can find me.
 
-rafael.a.ortiz@protonmail.com
-
-@Senicar on Wire
-
-Senicar on [Freenode](https://freenode.net/), [2600](https://www.2600.com/), and [OFTC](https://www.oftc.net/)
-
-[Senicar on Keybase](https://keybase.io/senicar)
-
-[FridayOrtiz on Twitter](https://twitter.com/FridayOrtiz)
-
-[Friday811 on GitHub](https://github.com/Friday811)
-
-[senicar@infosec.exchange](https://infosec.exchange/@senicar)
-
-Senicar#7020 on Discord
-
-[Senicar on Reddit](https://reddit.com/user/senicar)
+| Username | Service |
+|----------|---------|
+| rafael@ortiz.sh | Email |
+| rafael.a.ortiz@protonmail.com | Email |
+| @Senicar | Wire |
+| Senicar | [Freenode](https://freenode.net/), [2600](https://www.2600.com/), and [OFTC](https://www.oftc.net/) |
+| [Senicar](https://keybase.io/senicar) | Keybase |
+| [FridayOrtiz](https://twitter.com/FridayOrtiz) | Twitter |
+| [Friday811](https://github.com/Friday811) | GitHub |
+| [senicar@infosec.exchange](https://infosec.exchange/@senicar) | Mastodon |
+| Senicar#7020 | Discord |
+| [Senicar](https://reddit.com/user/senicar) | Reddit |
 
 # PGP Keys
 ## rafael@ortiz.sh
