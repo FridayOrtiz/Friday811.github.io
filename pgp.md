@@ -10,14 +10,14 @@ Here's where you can find me.
 |----------|---------|
 | rafael@ortiz.sh | Email |
 | rafael.a.ortiz@protonmail.com | Email |
-| @Senicar | Wire |
-| Senicar | [Freenode](https://freenode.net/), [2600](https://www.2600.com/), and [OFTC](https://www.oftc.net/) |
-| [Senicar](https://keybase.io/senicar) | Keybase |
-| [FridayOrtiz](https://twitter.com/FridayOrtiz) | Twitter |
-| [Friday811](https://github.com/Friday811) | GitHub |
-| [senicar@infosec.exchange](https://infosec.exchange/@senicar) | Mastodon |
-| Senicar#7020 | Discord |
-| [Senicar](https://reddit.com/user/senicar) | Reddit |
+| @Senicar | [Wire](https://get.wire.com/) |
+| Senicar | [Freenode](https://freenode.net/), [2600](https://www.2600.com/), and [OFTC](https://www.oftc.net/) IRC |
+| [Senicar](https://keybase.io/senicar) | [Keybase](https://keybase.io) |
+| [FridayOrtiz](https://twitter.com/FridayOrtiz) | [Twitter](https://twitter.com/) |
+| [Friday811](https://github.com/Friday811) | [GitHub](https://github.com/) |
+| [senicar@infosec.exchange](https://infosec.exchange/@senicar) | [Mastodon](https://joinmastodon.org/#getting-started) |
+| Senicar#7020 | [Discord](https://discord.com/) |
+| [Senicar](https://reddit.com/user/senicar) | [Reddit](https://reddit.com/) |
 
 # PGP Keys
 ## rafael@ortiz.sh
