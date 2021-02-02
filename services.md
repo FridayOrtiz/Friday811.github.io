@@ -12,3 +12,5 @@ referencer. More easily search through the Minix and Python source code.
 DNS-over-HTTPS server with ad blocking enabled. 
 [Add it to Firefox](https://support.mozilla.org/en-US/kb/firefox-dns-over-https)
 or [enable it in Windows 10](https://lifehacker.com/how-to-turn-on-dns-over-https-for-all-apps-in-windows-1-1843544589).
+*  [https://yamemoji.services/](https://yamemoji.services/), yams as a service.
+Add numbers for more yams (e.g., [5 yams](https://yamemoji.services/5)).
