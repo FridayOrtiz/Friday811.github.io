@@ -100,6 +100,8 @@ Here are the top five languages I use by hours, as recorded by
 *  [CryptoClipWatcher](https://ccw.e-paths.com/), a Windows utility to defend against clipboard hijacking malware. Written in C#.
 *  [ChainLock](https://chainlock.e-paths.com/walkthrough.html?lan=en#walkthrough), a Linux and Android tool to protect sensitive files. 
 Desktop application written in C and Python, with extensions. Mobile application written in Java.
+The project stands up a Tor hidden service to communicate. Ask me about it sometime,
+it's a fun one.
 
 #### Work Blog
 
