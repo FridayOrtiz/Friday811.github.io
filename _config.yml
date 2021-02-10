@@ -16,7 +16,8 @@
 title: rafael@ortiz.sh:~$
 email: rafael@ortiz.sh
 author: Rafael Ortiz
-description: This site is where I put notes on fun things I do between semesters.
+description: This site is where I put notes on fun things I do between semesters
+and serves as a living CV.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ortiz.sh" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: FridayOrtiz
