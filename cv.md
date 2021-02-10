@@ -12,7 +12,7 @@ For a detailed PDF copy of my CV please contact me at [rafael@ortiz.sh](mailto:r
 ```
 MS Cybersecurity 
 Johns Hopkins University
-05/2018 - 08/2022 (expected)
+05/2018 - 08/2023 (expected)
 ```
 
 ```
@@ -69,6 +69,18 @@ Undergraduate Research Assistant @ Botchwey Lab, Georgia Tech
 
 ## Other
 
+#### Top Languages
+
+Here are the top five languages I use by hours, as recorded by 
+[ActivityWatch](https://activitywatch.net/) on a monthly basis.
+
+| Month | 1 | 2 | 3 | 4 | 5 |
+|-------|---|---|---|---|---|
+| January 2021 | Go | Java | TypeScript | Python | Shell Script |
+| December 2020 | Rust | Go | Python | JavaScript | Java |
+| November 2020 | Java | Go | TypeScript | C | Python |
+| October 2020 | Java | TypeScript | Shell Script | Go | Python |
+
 #### Conferences & Speaking
 ```
 (2019) High assurance digital assets and identities for humans and machines:
@@ -82,6 +94,18 @@ Undergraduate Research Assistant @ Botchwey Lab, Georgia Tech
 (2018) Breaking out HSTS (and HPKP) on Firefox and Chrome, Hack Miami 6 (19 May)
     https://web.archive.org/web/20180530170414/https://www.hackmiami.com/speakers-hackmiami-conference-6
 ```
+
+#### Work Projects
+
+*  [CryptoClipWatcher](https://ccw.e-paths.com/), a Windows utility to defend against clipboard hijacking malware. Written in C#.
+*  [ChainLock](https://chainlock.e-paths.com/walkthrough.html?lan=en#walkthrough), a Linux and Android tool to protect sensitive files. 
+Desktop application written in C and Python, with extensions. Mobile application written in Java.
+
+#### Work Blog
+
+*  [How to Make API REST Requests to Tor Hidden Services in an Android APK](https://business.blogthinkbig.com/api-rest-requests-tor-hidden-services-android-apk/)
+*  [ChainLock, A Linux Tool for Locking Down Important Files](https://business.blogthinkbig.com/chainlock-linux-tool-locking-down-important-files/)
+
 #### Patents
 ```
 (2018) Methods and Systems for Multiple Independent Roots of Trust, 
