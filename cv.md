@@ -31,7 +31,7 @@ Security Researcher @ ElevenPaths Buenos Aires Lab
 ```
 
 ```
-Cybersecurity Presales @ Telefonica USA
+Cybersecurity Presales @ Telefonica Tech Cybersecurity
 01/2021 - ongoing
 ```
 
