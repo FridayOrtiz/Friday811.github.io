@@ -31,11 +31,16 @@ Security Researcher @ ElevenPaths Buenos Aires Lab
 ```
 
 ```
-Cybersecurity Specialist @ Telefonica USA
-02/2017 - ongoing
+Cybersecurity Presales @ Telefonica USA
+01/2021 - ongoing
 ```
 
 #### Past
+
+```
+Cybersecurity Specialist @ Telefonica USA
+02/2017 - 12/2020
+```
 
 ```
 Owner @ Poolsloth VRM Cryptocurrency Mining Pool
