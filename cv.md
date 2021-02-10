@@ -43,7 +43,7 @@ Owner @ Poolsloth VRM Cryptocurrency Mining Pool
 ```
 
 ```
-Project Coordinator and IT Admin @ Specialty Telehealth Services
+VOIP Network, System & Security Admin @ Specialty Telehealth Services
 07/2015 - 02/2017
 ```
 
