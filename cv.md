@@ -38,7 +38,7 @@ Cybersecurity Specialist @ Telefonica USA
 #### Past
 
 ```
-Operator @ Poolsloth VRM Cryptocurrency Mining Pool
+Owner @ Poolsloth VRM Cryptocurrency Mining Pool
 08/2017 - 05/2019
 ```
 
