@@ -81,6 +81,7 @@ Here are the top five languages I use by hours, as recorded by
 
 | Month | 1 | 2 | 3 | 4 | 5 |
 |-------|---|---|---|---|---|
+| February 2021 | Python | Rust | Shell Script | Java | JavaScript |
 | January 2021 | Go | Java | TypeScript | Python | Shell Script |
 | December 2020 | Rust | Go | Python | JavaScript | Java |
 | November 2020 | Java | Go | TypeScript | C | Python |
