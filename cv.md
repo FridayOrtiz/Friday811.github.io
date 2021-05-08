@@ -26,16 +26,21 @@ Georgia Tech
 #### Current
 
 ```
+Senior Software Engineer @ Red Canary
+05/2021 - ongoing
+```
+
+#### Past
+
+```
 Security Researcher @ ElevenPaths Buenos Aires Lab
-10/2017 - ongoing
+10/2017 - 05/2021
 ```
 
 ```
 Cybersecurity Presales @ Telefonica Tech Cybersecurity
-01/2021 - ongoing
+01/2021 - 05/2021
 ```
-
-#### Past
 
 ```
 Cybersecurity Specialist @ Telefonica USA
@@ -81,6 +86,8 @@ Here are the top five languages I use by hours, as recorded by
 
 | Month | 1 | 2 | 3 | 4 | 5 |
 |-------|---|---|---|---|---|
+| April 2021 | Rust | Python | C | Shell Script | JavaScript |
+| March 2021 | Rust | JavaScript | Java | Go | Python |
 | February 2021 | Python | Rust | Shell Script | Java | JavaScript |
 | January 2021 | Go | Java | TypeScript | Python | Shell Script |
 | December 2020 | Rust | Go | Python | JavaScript | Java |
@@ -88,6 +95,7 @@ Here are the top five languages I use by hours, as recorded by
 | October 2020 | Java | TypeScript | Shell Script | Go | Python |
 
 #### Conferences & Speaking
+
 ```
 (2019) High assurance digital assets and identities for humans and machines:
     building a trustworthy blockchain, Florida Blockchain Foundation Supply 
