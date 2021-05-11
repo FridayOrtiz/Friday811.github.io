@@ -14,7 +14,7 @@ Here's where you can find me.
 | Senicar | [Freenode](https://freenode.net/), [2600](https://www.2600.com/), and [OFTC](https://www.oftc.net/) IRC |
 | [Senicar](https://keybase.io/senicar) | [Keybase](https://keybase.io) |
 | [FridayOrtiz](https://twitter.com/FridayOrtiz) | [Twitter](https://twitter.com/) |
-| [Friday811](https://github.com/Friday811) | [GitHub](https://github.com/) |
+| [RafaelOrtizRC](https://github.com/RafaelOrtizRC) | [GitHub](https://github.com/) |
 | [senicar@infosec.exchange](https://infosec.exchange/@senicar) | [Mastodon](https://joinmastodon.org/#getting-started) |
 | Senicar#7020 | [Discord](https://discord.com/) |
 | [Senicar](https://reddit.com/user/senicar) | [Reddit](https://reddit.com/) |
