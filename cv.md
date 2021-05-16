@@ -26,7 +26,7 @@ Georgia Tech
 #### Current
 
 ```
-Senior Software Engineer @ Red Canary
+Applied Security R&D Engineer @ Red Canary
 05/2021 - ongoing
 ```
 
