@@ -22,7 +22,7 @@ description: >
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ortiz.sh" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: FridayOrtiz
-github_username:  Friday811
+github_username:  RafaelOrtizRC
 linkedin_username: rafael-ortiz
 mastodon:
 - username: Senicar
