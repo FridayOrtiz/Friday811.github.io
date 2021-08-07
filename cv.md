@@ -26,7 +26,7 @@ Georgia Tech
 #### Current
 
 ```
-Senior Software Engineer @ Red Canary
+Senior Security R&D Engineer @ Red Canary
 05/2021 - ongoing
 ```
 
@@ -93,6 +93,11 @@ Here are the top five languages I use by hours, as recorded by
 | December 2020 | Rust | Go | Python | JavaScript | Java |
 | November 2020 | Java | Go | TypeScript | C | Python |
 | October 2020 | Java | TypeScript | Shell Script | Go | Python |
+
+My new employer is less than thrilled to allow ActivityWatch on corporate
+machines, so the information stops at April. I do have some GitHub stats.
+
+![Top used languages, per GitHub](https://github-readme-stats.vercel.app/api/top-langs/?username=RafaelOrtizRC&layout=compact&theme=graywhite&langs_count=8&count_private=true&card_width=720)
 
 #### Conferences & Speaking
 
