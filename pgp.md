@@ -9,12 +9,11 @@ Here's where you can find me.
 | Username | Service |
 |----------|---------|
 | rafael@ortiz.sh | Email |
-| @Senicar | [Wire](https://get.wire.com/) |
+| @senicar:the.cyb3r.dog | Matrix |
 | Senicar | [2600](https://www.2600.com/), [Libera](https://libera.chat/), and [OFTC](https://www.oftc.net/) IRC |
 | [Senicar](https://keybase.io/senicar) | [Keybase](https://keybase.io) |
 | [FridayOrtiz](https://twitter.com/FridayOrtiz) | [Twitter](https://twitter.com/) |
 | [RafaelOrtizRC](https://github.com/RafaelOrtizRC) | [GitHub](https://github.com/) |
-| [senicar@infosec.exchange](https://infosec.exchange/@senicar) | [Mastodon](https://joinmastodon.org/#getting-started) |
 | Senicar#7020 | [Discord](https://discord.com/) |
 | [Senicar](https://reddit.com/user/senicar) | [Reddit](https://reddit.com/) |
 
