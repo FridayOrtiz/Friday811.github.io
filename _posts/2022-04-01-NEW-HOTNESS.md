@@ -44,8 +44,6 @@ this is related to a recent BPF
 that also affects the BPF verifier. It isn't, but I want you to think that it
 is.
 
-* please note this is exactly the same as some other BPF CVE (it isn't actually but pretend it is)
-
 [^bees]: This actually isn't part of the joke, [bees are awesome.](https://www.nrcs.usda.gov/wps/portal/nrcs/detail/national/plantsanimals/pollinate/?cid=stelprdb1263263)
 [We really gotta save the bees.](https://thebeeconservancy.org/10-ways-to-save-the-bees/)
 
