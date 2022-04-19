@@ -12,7 +12,7 @@ For a detailed PDF copy of my CV please contact me at [rafael@ortiz.sh](mailto:r
 ```
 MS Cybersecurity 
 Johns Hopkins University
-05/2018 - 08/2023 (expected)
+05/2018 - 08/2022 (expected)
 ```
 
 ```
@@ -26,7 +26,7 @@ Georgia Tech
 #### Current
 
 ```
-Senior Security R&D Engineer @ Red Canary
+Senior Security Researcher @ Red Canary
 05/2021 - ongoing
 ```
 
