@@ -95,13 +95,18 @@ Here are the top five languages I use by hours, as recorded by
 | October 2020 | Java | TypeScript | Shell Script | Go | Python |
 
 My new employer is less than thrilled to allow ActivityWatch on corporate
-machines, so the information stops at April. I do have some GitHub stats.
+machines, so the information stops at April. I do have some GitHub stats,
+but keep in mind these only use publicly available information.
 
 ![Top used languages, per GitHub](https://github-readme-stats.vercel.app/api/top-langs/?username=RafaelOrtizRC&layout=compact&theme=graywhite&langs_count=8&count_private=true&card_width=720)
 
 #### Conferences & Speaking
 
 ```
+(2022) every Boring Problem Found in eBPF, Way West Hackin' Fest (5-8 May)
+    https://wildwesthackinfest.com/way-west/speakers-2022/
+(2022) oxidebpf Toolshed Demo, Way West Hackin' Fest (5-8 May)
+    https://wildwesthackinfest.com/way-west/speakers-2022/
 (2019) High assurance digital assets and identities for humans and machines:
     building a trustworthy blockchain, Florida Blockchain Foundation Supply 
     Chain Digital Transformation Session 2: Blockchain Technology for Air Travel
@@ -114,18 +119,23 @@ machines, so the information stops at April. I do have some GitHub stats.
     https://web.archive.org/web/20180530170414/https://www.hackmiami.com/speakers-hackmiami-conference-6
 ```
 
-#### Work Projects
+#### Other Stuff I've Done
 
 *  [CryptoClipWatcher](https://ccw.e-paths.com/), a Windows utility to defend against clipboard hijacking malware. Written in C#.
 *  [ChainLock](https://chainlock.e-paths.com/walkthrough.html?lan=en#walkthrough), a Linux and Android tool to protect sensitive files. 
 Desktop application written in C and Python, with extensions. Mobile application written in Java.
 The project stands up a Tor hidden service to communicate. Ask me about it sometime,
 it's a fun one.
+*  [oxidebpf](https://github.com/redcanaryco/oxidebpf), a Rust library for managing BPF programs.
+*  [redcanary-ebpf-sensor](https://github.com/redcanaryco/redcanary-ebpf-sensor), a suite of eBPF programs for gathering security telemetry.
 
-#### Work Blog
+#### Other Places I've Written
 
 *  [How to Make API REST Requests to Tor Hidden Services in an Android APK](https://business.blogthinkbig.com/api-rest-requests-tor-hidden-services-android-apk/)
 *  [ChainLock, A Linux Tool for Locking Down Important Files](https://business.blogthinkbig.com/chainlock-linux-tool-locking-down-important-files/)
+*  [Introducing oxidebpf: an open source Linux tool for Rust and eBPF developers](https://redcanary.com/blog/oxidebpf/)
+*  [eBPF for Security: a Beginner's Guide](https://redcanary.com/blog/ebpf-for-security/)
+*  [every Boring Problem Found in eBPF](https://tmpout.sh/2/4.html)
 
 #### Patents
 ```
