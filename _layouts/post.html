@@ -24,14 +24,14 @@ layout: default
             {%- if forloop.last == false %}, {% endif -%}
         {% endfor %}
       {%- endif -%}
-      {%- if page.tags -%}
+      {% if page.tags %}
         <span>
-        Tags: 
-        {%- for tag in page.tags -%}
+        &#013;Tags: 
+        {% for tag in page.tags %}
             <a class="tag" href="/tag.html#{{ tag | slugify }}">{{ tag }}</a>,
-        {%- endfor -%}
+        {% endfor %}
         </span>
-      {%- endif -%}
+      {% endif %}
     </p>
   </header>
 
