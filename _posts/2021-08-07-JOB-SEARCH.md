@@ -3,6 +3,7 @@ layout: post
 title: "Looking for a Remote Cybersecurity Job in 2021"
 date:   2021-08-07 13:00:00 -0400
 categories: work
+tags: [remote, work]
 ---
 
 It's been long enough that I'd like to document my job search and interview

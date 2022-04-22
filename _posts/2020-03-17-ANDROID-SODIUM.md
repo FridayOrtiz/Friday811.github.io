@@ -3,6 +3,7 @@ layout: post
 title:  "Integrating Libsodium SealedBox into an Android Studio Project"
 date:   2020-03-20 18:30:00 -0400
 categories: android
+tags: [android, cryptography]
 ---
 
 This post documents my attempt to get [libsodium-jni](https://github.com/joshjdevl/libsodium-jni)

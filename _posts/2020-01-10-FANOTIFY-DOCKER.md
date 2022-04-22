@@ -3,6 +3,7 @@ layout: post
 title:  "Using fanotify within Docker Containers"
 date:   2020-01-10 19:00:00 -0500
 categories: linux
+tags: [linux, docker, fanotify]
 ---
 
 I was recently dockerizing tests for a program I'm working on that utilizes

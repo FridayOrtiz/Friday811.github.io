@@ -3,6 +3,7 @@ layout: post
 title: "ChainLock, A Linux Tool for Locking Down Important Files"
 date:   2020-10-02 00:00:00 -0500
 categories: linux
+tags: [linux, security]
 ---
 
 **This post was originally written for the ElevenPaths Innovation and

@@ -3,6 +3,7 @@ layout: post
 title: "Introducing oxidebpf: an open source Linux tool for Rust and eBPF developers"
 date:   2021-11-01 00:00:00 -0500
 categories: ebpf
+tags: [ebpf, linux, rust, c]
 ---
 
 **This post was written for Red Canary and originally appeared on their site
