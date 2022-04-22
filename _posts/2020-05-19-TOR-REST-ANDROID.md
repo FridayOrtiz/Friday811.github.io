@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Make API REST Requests to Tor Hidden Services in an Android APK"
-date:   2022-05-19 00:00:00 -0500
+date:   2020-05-19 00:00:00 -0500
 categories: android
 tags: [android, tor]
 ---
