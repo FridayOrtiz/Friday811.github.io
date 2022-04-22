@@ -3,6 +3,7 @@ layout: post
 title: "BeeSTrING: Critical Vulnerability in BPF Subsystem Allows Fully Unauthenticated RCE as Root"
 date:   2022-04-01 00:00:00 -0500
 categories: clout
+tags: [clout, ebpf, exploit]
 ---
 
 **TL;DR:** Look at the publication date, I'm fucking with you.

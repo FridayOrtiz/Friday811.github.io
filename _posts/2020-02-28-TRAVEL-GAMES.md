@@ -3,6 +3,7 @@ layout: post
 title:  "Airsick Gaming with the Switch"
 date:   2020-02-28 20:00:00 -0500
 categories: flying
+tags: [flying, gaming]
 ---
 
 TL;DR: Anecdotally, the best Switch games to play if you get mildly airsick.

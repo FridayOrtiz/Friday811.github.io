@@ -3,6 +3,7 @@ layout: post
 title: "every Boring Problem Found in eBPF"
 date:   2022-02-22 00:00:00 -0400
 categories: ebpf
+tags: [ebpf, tmpout]
 ---
 
 **This article was originally written for tmp.0ut volume 2 and is available

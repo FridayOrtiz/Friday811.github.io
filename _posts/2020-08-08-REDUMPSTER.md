@@ -3,6 +3,7 @@ layout: post
 title: "Revisiting Blockchain DNS"
 date:   2020-08-08 15:30:00 -0400
 categories: blockchain
+tags: [blockchain, dns]
 ---
 
 I recently received an email from [Oleg Khovayko](https://www.linkedin.com/in/oleg-khovayko-78a2165/), the CTO of [Emercoin](https://emercoin.com), after he

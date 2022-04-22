@@ -3,6 +3,7 @@ layout: post
 title: "eBPF for security: a beginner's guide"
 date:   2022-01-04 00:00:00 -0500
 categories: ebpf
+tags: [ebpf, linux]
 ---
 
 **This post was written for Red Canary and originally appeared on their site

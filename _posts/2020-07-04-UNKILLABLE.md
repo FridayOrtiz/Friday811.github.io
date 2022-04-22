@@ -3,6 +3,7 @@ layout: post
 title:  "Creating an Unkillable Process by Abusing Character Devices"
 date:   2020-07-04 22:00:00 -0400
 categories: linux
+tags: [linux, security]
 ---
 
 TL;DR: This is probably a bad idea and you don't actually want use this.
