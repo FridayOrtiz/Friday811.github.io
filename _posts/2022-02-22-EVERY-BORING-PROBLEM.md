@@ -7,7 +7,7 @@ categories: ebpf
 
 **This article was originally written for tmp.0ut volume 2 and is available
 here: [https://tmpout.sh/2/4.html](https://tmpout.sh/2/4.html). Due to the
-unique (read: badass) format of the zine, it is replicated here as plaintext**
+unique (read: badass) format of the zine, it is replicated here as plaintext.**
 
 # Errata
 
