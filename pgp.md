@@ -10,7 +10,6 @@ Here's where you can find me.
 |----------|---------|
 | rafael@ortiz.sh | Email |
 | @senicar:the.cyb3r.dog | Matrix |
-| Senicar | [2600](https://www.2600.com/), [Libera](https://libera.chat/), and [OFTC](https://www.oftc.net/) IRC |
 | [Senicar](https://keybase.io/senicar) | [Keybase](https://keybase.io) |
 | [FridayOrtiz](https://twitter.com/FridayOrtiz) | [Twitter](https://twitter.com/) |
 | [RafaelOrtizRC](https://github.com/RafaelOrtizRC) | [GitHub](https://github.com/) |
