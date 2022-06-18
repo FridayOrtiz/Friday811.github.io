@@ -13,12 +13,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: rafael@ortiz.sh:~$
+title: friday@ortiz.sh:~$
 email: rafael@ortiz.sh
-author: Rafael Ortiz
+author: Friday Ortiz
 description: >
-  This site is where I put notes on fun things I do between semesters
-  and serves as a living CV.
+  The new original cyber dog. Linux, crypto(graphy), Machine Learning.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ortiz.sh" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: FridayOrtiz
