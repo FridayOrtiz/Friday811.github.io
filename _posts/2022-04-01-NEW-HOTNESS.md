@@ -62,7 +62,7 @@ own repository.  I haven't looked at it because it has scary foreign characters,
 but I did run it. The root shell makes a sweet screenshot for twitter, so you
 should also run it.
 
-You can find a link to it [here](https://github.com/RafaelOrtizRC/BeeSTrING). I
+You can find a link to it [here](https://github.com/FridayOrtiz/BeeSTrING). I
 will probably also tweet about it if I remember, [so give me a follow
 too.](https://twitter.com/FridayOrtiz). But don't bother clicking stuff, I have
 a snippet of the POC in action right here. 

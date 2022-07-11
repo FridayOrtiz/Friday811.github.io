@@ -98,7 +98,7 @@ My new employer is less than thrilled to allow ActivityWatch on corporate
 machines, so the information stops at April. I do have some GitHub stats,
 but keep in mind these only use publicly available information.
 
-![Top used languages, per GitHub](https://github-readme-stats.vercel.app/api/top-langs/?username=RafaelOrtizRC&layout=compact&theme=graywhite&langs_count=8&count_private=true&card_width=720)
+![Top used languages, per GitHub](https://github-readme-stats.vercel.app/api/top-langs/?username=FridayOrtiz&layout=compact&theme=graywhite&langs_count=8&count_private=true&card_width=720)
 
 #### Conferences & Speaking
 
