@@ -26,11 +26,17 @@ Georgia Tech
 #### Current
 
 ```
-Senior Security Researcher @ Red Canary
-05/2021 - ongoing
+Senior Researcher @ BigCo Vendor
+08/2022 - ongoing
 ```
 
 #### Past
+
+
+```
+Senior Security Researcher @ Red Canary
+05/2021 - 07/2022
+```
 
 ```
 Security Researcher @ ElevenPaths Buenos Aires Lab
