@@ -26,7 +26,7 @@ Georgia Tech
 #### Current
 
 ```
-Senior Researcher @ BigCo Vendor
+Senior Researcher @ BigCo Security Vendor
 08/2022 - ongoing
 ```
 
