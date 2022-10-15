@@ -10,9 +10,9 @@ For a detailed PDF copy of my CV please contact me at [rafael@ortiz.sh](mailto:r
 ## Education
 
 ```
-MS Cybersecurity 
+MS Cybersecurity, 4.0, with Honors
 Johns Hopkins University
-05/2018 - 08/2022 (expected)
+05/2018 - 08/2022
 ```
 
 ```
@@ -26,7 +26,7 @@ Georgia Tech
 #### Current
 
 ```
-Senior Researcher @ BigCo Security Vendor
+Senior Linux Threat Researcher @ Sophos
 08/2022 - ongoing
 ```
 
