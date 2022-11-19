@@ -10,11 +10,9 @@ Here's where you can find me.
 |----------|---------|
 | rafael@ortiz.sh | Email |
 | @senicar:the.cyb3r.dog | Matrix |
-| [Senicar](https://keybase.io/senicar) | [Keybase](https://keybase.io) |
-| [FridayOrtiz](https://twitter.com/FridayOrtiz) | [Twitter](https://twitter.com/) |
+| [Senicar](https://infosec.exchange/@Senicar) | [Infosec Exchange (Mastodon)](https://infosec.exchange/) |
 | [FridayOrtiz](https://github.com/FridayOrtiz) | [GitHub](https://github.com/) |
 | Senicar#7020 | [Discord](https://discord.com/) |
-| [Senicar](https://reddit.com/user/senicar) | [Reddit](https://reddit.com/) |
 
 ## PGP Key
 
