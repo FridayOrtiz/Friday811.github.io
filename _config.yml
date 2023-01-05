@@ -36,7 +36,8 @@ paginate_path: "posts/page:num/"
 
 # Build settings
 markdown: kramdown
-theme: minima
+#theme: minima
+remote_theme: h01000110/windows-95
 plugins:
   - jekyll-feed
   - jekyll-paginate
