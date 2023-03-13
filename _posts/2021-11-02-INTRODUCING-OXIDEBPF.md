@@ -10,8 +10,7 @@ tags: [ebpf, linux, rust, c]
 [here](https://redcanary.com/blog/oxidebpf/).**
 
 **Author's Note: This was originally written for an old version of `oxidebpf`
-(0.1.0, the initial release).  For an example on a more recent crate (0.2.x),
-check out my WWHF Toolshed talk: FUTURE FRIDAY PUT LINK HERE.**
+(0.1.0, the initial release).**
 
 BPF is a [Linux kernel](https://redcanary.com/blog/linux-101/) subsystem that
 allows a user to run a limited set of instructions on a virtual machine running
