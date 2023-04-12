@@ -21,7 +21,7 @@ level. If not, check out
 technical enough, [try](https://tmpout.sh/2/4.html)
 [these](https://ortiz.sh/bpf/2021/12/02/THE-HIVE.html).
 
-Also, code examples will come from the latest non-RC kernel as of writing. This
+Also, code examples will come from kernel 6.2.9. This
 means the examples can (do, and probably will) change significantly without
 warning on newer and older kernels.
 
@@ -82,7 +82,7 @@ there are a lot of fundamental changes that mean cBPF code won't "just work"
 with the eBPF specification.
 
 [Here is a cBPF
-instruction](https://elixir.bootlin.com/linux/latest/source/include/uapi/linux/filter.h#L24):
+instruction](https://elixir.bootlin.com/linux/v6.2.9/source/include/uapi/linux/filter.h#L24):
 
 ```c
 struct sock_filter {    /* Filter block */
@@ -94,7 +94,7 @@ struct sock_filter {    /* Filter block */
 ```
 
 [And here is an eBPF
-instruction](https://elixir.bootlin.com/linux/latest/source/include/uapi/linux/bpf.h#L71):
+instruction](https://elixir.bootlin.com/linux/v6.2.9/source/include/uapi/linux/bpf.h#L71):
 
 ```c
 struct bpf_insn {
@@ -121,7 +121,7 @@ To prove a point, let's see what happens when we do exactly that. We'll use
 
 This gives us a code of `0x06`, empty `jt` and `jf`, and a multiuse value of
 `0x00040000`. The code of `0x06` corresponds to
-[`BPF_RET`](https://elixir.bootlin.com/linux/latest/source/include/uapi/linux/bpf_common.h#L13),
+[`BPF_RET`](https://elixir.bootlin.com/linux/v6.2.9/source/include/uapi/linux/bpf_common.h#L13),
 which indicates that this is a return instruction. The `0x00040000` value
 corresponds to the size of the packet (snapshot length) we want to capture. By
 default, it's 256 kibibytes. This simple filter immediately returns and says
@@ -173,25 +173,25 @@ bpf: Invalid argument
 But why does this fail? When the cBPF instruction gets interpreted as an eBPF
 instruction, the `0x06` half of the cBPF `code` short ends up in the eBPF `code`
 byte. In eBPF this value maps to
-[`BPF_JMP32`](https://elixir.bootlin.com/linux/latest/source/include/uapi/linux/bpf.h#L17).
+[`BPF_JMP32`](https://elixir.bootlin.com/linux/v6.2.9/source/include/uapi/linux/bpf.h#L17).
 In eBPF this is called an _instruction class_ and should be paired with an
 _operation_ to do something useful. For example, the eBPF equivalent of
 `BPF_RET` is
-[`BPF_EXIT_INSN`](https://elixir.bootlin.com/linux/latest/source/include/linux/filter.h#L387)
+[`BPF_EXIT_INSN`](https://elixir.bootlin.com/linux/v6.2.9/source/include/linux/filter.h#L387)
 which is the OR of `BPF_JMP` (class) and `BPF_EXIT` (operation). When we pass
 this filter straight into the `bpf` syscall we end up in the
-[`check_subprogs`](https://elixir.bootlin.com/linux/latest/source/kernel/bpf/verifier.c#L2223)
+[`check_subprogs`](https://elixir.bootlin.com/linux/v6.2.9/source/kernel/bpf/verifier.c#L2402)
 function, which checks our code and falls through to the subprogram length
 check. Because we fell through, the verify knows we must have some kind of jump
 instruction. Because our program is only one instruction long, the jump is
 necessarily out of range, and the verification fails.
 
 ```c
-		off = i + insn[i].off + 1; // off = 1 for the cBPF program, subprog_end = 1
-		if (off < subprog_start || off >= subprog_end) {
-			verbose(env, "jump out of range from insn %d to %d\n", i, off);
-			return -EINVAL;
-		}
+off = i + insn[i].off + 1; // off = 1 for the cBPF program, subprog_end = 1
+if (off < subprog_start || off >= subprog_end) {
+	verbose(env, "jump out of range from insn %d to %d\n", i, off);
+	return -EINVAL;
+}
 ```
 
 Of course you might be able to hand craft a valid cBPF-eBPF polyglot, but the
