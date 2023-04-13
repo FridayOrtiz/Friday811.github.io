@@ -206,8 +206,7 @@ When thinking about the difference between cBPF and eBPF, it's better to think
 of it as more of a Python 2 to Python 3 style conversion and not as a C to C++
 style conversion[^pedantic]. eBPF is its own new thing, not a superset of cBPF.
 
-[^pedantic]: I suppose C++ is not strictly a superset of C, due to differences
-in behaviors in the specs. But it's close enough for this metaphor.
+[^pedantic]: I suppose C++ is not strictly a superset of C, due to differences in behaviors in the specs. But it's close enough for this metaphor.
 
 # BPF as Malware
 
