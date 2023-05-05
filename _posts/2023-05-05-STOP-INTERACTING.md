@@ -221,15 +221,16 @@ asking it to please do its thing thank you.
 
 Most of the time this is actually fine. There's no meaningful difference between
 downloading an installer off rustup.rs and giving them a shell. I'm trusting
-them to run code on my box either way. But if you're, say, running container in
-production there is a meaningful security difference between running an
+them to run code on my box either way. But if you're, say, running a container
+in production there is a meaningful security difference between running an
 installer with a finite set of instructions and giving a third party service a
-shell. Yes, you can still trust rustup.rs either way. 
+shell. 
 
-But for your security team, from a behavioral perspective, running the installer
-by piping it into `sh` instead of running it off disk looks _exactly the same_
-as an adversary popping a shell on your box with `nc`. Your adversaries know
-this, and they're laughing at you whenever you do it.
+Yes, you can still trust rustup.rs either way. But for your security team, from
+a behavioral perspective, running the installer by piping it into `sh` instead
+of running it off disk looks _exactly the same_ as an adversary popping a shell
+on your box with `nc`. Your adversaries know this, and they're laughing at you
+whenever you do it.
 
 Back in 2016 someone wrote a blog post about [detecting the use of `curl | bash`
 server
