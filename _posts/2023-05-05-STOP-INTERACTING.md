@@ -206,10 +206,10 @@ Let's just... ignore that. For a moment. In practice it's not that big of a
 deal. Most scripts are simple enough that we can actually determine that they'll
 halt. If you slap a `-s -- -y` to the end of the [rust installer
 command](https://rustup.rs/), you can manually trace it doing its thing, then
-stopping. If you don't, you can see it starts waiting for user input (forever,
-if you ignore it). So if we can easily determine that this `curl | sh` will
-halt, and is non-interactive, why did I claim that it was at the start of this
-post?
+stopping. If you don't start it with `-y`, you can see it starts waiting for
+user input (forever, if you ignore it). So if we can easily determine that this
+`curl | sh` will halt, and is non-interactive, why did I claim that it was
+interactive at the start of this post?
 
 > at the start of the process
 
