@@ -8,13 +8,13 @@ tags: [linux, shells, security, screamingintothevoid]
 
 Or: please, _please_, stop piping `curl` into `bash` in prod.
 
-**tl;dr:** A shell's built-in understanding (and the conventional understanding)
+**TL;DR:** A shell's built-in understanding (and the conventional understanding)
 of its own interactivity is different from what might be considered interactive
 from a security perspective. From a defensive security point of view, piping
 `curl` into `bash` is indistinguishable from an interactive shell. Because of
 the halting problem (kinda).
 
-**'tl;dr'tl;dr:** My head hurts and I want to go home.
+**'TL;DR'TL;DR:** My head hurts and I want to go home.
 
 ## Interactive shells mean something bad happened, right?
 
@@ -69,7 +69,7 @@ believes itself to be interactive. It was not spawned from a TTY, and it is not
 interacting with a TTY from its own perspective, which we can see when we check
 its open file descriptors.
 
-Another answer I got was alone the lines of "123 is waiting for user input, and
+Another answer I got was along the lines of "123 is waiting for user input, and
 456 is just executing a script." That's a better answer, but it's still not
 quite correct. Here's a script that will definitely interact with the user, but
 believes itself to be operating non-interactively.
