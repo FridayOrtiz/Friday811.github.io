@@ -15,7 +15,7 @@ tags: [linux, ebpf, security, ctf]
 Download the `.ova` and import the appliance into Virtualbox. Start the machine
 and log in directly from the virtual console.
 
-Username: `datascience`
+Username: `datascience`  
 Password: `password`
 
 Your goal is to read `/root/flag.txt` by exploiting a vulnerability in the eBPF
