@@ -59,9 +59,8 @@ Scroll down for the walkthrough (spoilers!).
 
 ## Hints
 
-The following are copies of all the hints available on the box, if you'd prefer
-to try to solve it yourself. You can scroll past the things to get to the step
-by step walkthrough.
+Here are all the hints available on the box, if you'd prefer to try to solve it
+yourself. You can scroll past the things to get to the step by step walkthrough.
 
 ### Hint 1
 
@@ -327,9 +326,9 @@ int enter_write(struct pt_regs * ctx):
 eBPF call arguments are stored in order in `r1`, `r2`, `r3`, and so on. From the
 dumped code we can see:
 
-1) the kprobe checks if the file descriptor passed to `write()` is `0xDEADBEE`
-2) if it is, we start preparing a `task_detail` struct and copy the contents of `buf` into it
-3) we then store this `task_detail` struct in a map with id 24 by calling `htab_lru_map_update_elem` with `r1` being the map id 24, `r2` being a pointer to an empty index value, `r3` being a pointer to the `task_detail`, and `r4 = 1` being the flag `BPF_NOEXIST`
+1. the kprobe checks if the file descriptor passed to `write()` is `0xDEADBEE`
+1. if it is, we start preparing a `task_detail` struct and copy the contents of `buf` into it
+1. we then store this `task_detail` struct in a map with id 24 by calling `htab_lru_map_update_elem` with `r1` being the map id 24, `r2` being a pointer to an empty index value, `r3` being a pointer to the `task_detail`, and `r4 = 1` being the flag `BPF_NOEXIST`
 
 This means we can store any string in this hashtable map by calling `write` with
 the special file descriptor `0xDEADBEE` if a string is not already stored in the
