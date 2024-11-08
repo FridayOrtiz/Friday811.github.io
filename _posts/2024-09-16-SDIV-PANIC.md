@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ""
+title: "Replicating an eBPF SDIV Oops"
 date: 2024-09-16 15:00:00 -0400
 categories: linux
 tags: [linux, ebpf]
