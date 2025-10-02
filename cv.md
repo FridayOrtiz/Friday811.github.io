@@ -26,12 +26,16 @@ Georgia Tech
 #### Current
 
 ```
-Senior Linux Threat Researcher @ Sophos
-08/2022 - ongoing
+Principal Linux Threat Researcher @ Sophos
+07/2025 - ongoing
 ```
 
 #### Past
 
+```
+Senior Linux Threat Researcher @ Sophos
+08/2022 - 06/2025
+```
 
 ```
 Senior Security Researcher @ Red Canary
@@ -87,6 +91,8 @@ Undergraduate Research Assistant @ Botchwey Lab, Georgia Tech
 
 #### Top Languages
 
+<details>
+<summary>Pre-2020 Top Languages</summary>
 Here are the top five languages I use by hours, as recorded by 
 [ActivityWatch](https://activitywatch.net/) on a monthly basis.
 
@@ -103,6 +109,7 @@ Here are the top five languages I use by hours, as recorded by
 My new employer is less than thrilled to allow ActivityWatch on corporate
 machines, so the information stops at April. I do have some GitHub stats,
 but keep in mind these only use publicly available information.
+</details>
 
 ![Top used languages, per GitHub](https://github-readme-stats.vercel.app/api/top-langs/?username=FridayOrtiz&layout=compact&theme=graywhite&langs_count=8&count_private=true&card_width=720)
 
