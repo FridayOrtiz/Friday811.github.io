@@ -31,15 +31,15 @@ I awoke this morning to something terrible: a message from a friend containing
 only the link to the DirtyFrag repo, adorned with several fire and explosion
 emoji reactions. Thanks, chat. 
 
-At this point I am still in bed, trying to get my 90 pound golden retriever off
-my chest so I can read this repo on a properly sized screen.
+> At this point I am still in bed, trying to get my 90 pound golden retriever off
+> my chest so I can read this repo on a properly sized screen.
 
 This is the second LPE to drop this week, from a researcher using AI.  Good
 thing I'm also a researcher, but I'm specialized in Linux, not AI! Thankfully,
 the Claude app supports Apple Pay, so it was very easy for me to (tactically)
 purchase a license in response.
 
-At this point I am waiting for my espresso machine to warm up.
+> At this point I am waiting for my espresso machine to warm up.
 
 Before talking to the robot, I had a human thought: why are all these ancient
 modules nobody uses still enabled by default on a wide range of distros?  Like,
@@ -47,10 +47,10 @@ yeah, the STIGs say to turn them off, but who reads those? So I used my human
 brain to ask the robot to help me look through the kernel git history and find
 high risk modules and features that nobody really needs or uses. 
 
-N.B.: One thing that AI is really great at is reducing the cost of exploring any
-ridiculous research hypothesis that slides across my brain.  It hasn't done much
-for the cost of reviewing them, sadly.  Which is why I'm typing this with my
-human hands instead of letting the nice robot write it for me.
+> N.B.: One thing that AI is really great at is reducing the cost of exploring any
+> ridiculous research hypothesis that slides across my brain.  It hasn't done much
+> for the cost of reviewing them, sadly.  Which is why I'm typing this with my
+> human hands instead of letting the nice robot write it for me.
 
 One common theme between [CopyFail](https://github.com/theori-io/copy-fail-CVE-2026-31431) and [DirtyFrag](https://github.com/V4bel/dirtyfrag) was the exploitation of
 relatively exotic kernel subsystems that are autoloadable, enabled by default
@@ -61,8 +61,8 @@ point. Hey Claude, how can we programmatically identify these low value, high
 risk, code paths, and build a kernel hardening guide that mitigates them for
 most people, without hurting users that legitimately rely on them?
 
-At this point, the coffee has done its thing and I am getting ready to go for a
-morning run.
+> At this point, the coffee has done its thing and I am getting ready to go for a
+> morning run.
 
 Claude flombulated for a bit and, thousands of tokens later, produced [this
 repository](https://github.com/FridayOrtiz/turn-that-shit-off) that did exactly that. I want to make a joke about how it took a lot
@@ -72,8 +72,8 @@ through the kernel git history happened while I on my morning 10k. I find cardio
 helps me stay centered when we receive panicked calls from customers about the
 latest exploit drops.
 
-At this point I smell terrible, and am working on getting DirtyFrag coverage out
-to our customers at $dayJob. Claude churns on.
+> At this point I smell terrible, and am working on getting DirtyFrag coverage out
+> to our customers at $dayJob. Claude churns on.
 
 If you want to see the repo it's here: [github.com/FridayOrtiz/turn-that-shit-off](https://github.com/FridayOrtiz/turn-that-shit-off). I also linked it above, you should
 really click more things. It's easy and free.
