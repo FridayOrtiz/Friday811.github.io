@@ -12,8 +12,8 @@ things you should probably just disable.
 
 **'tl;dr'tl;dr**: turn off the ham radio modules, please.
 
-Hardening Kconfig [here]().
-Hardening module blocklist [here]().
+Hardening Kconfig [here](https://github.com/FridayOrtiz/turn-that-shit-off/blob/main/hardening/hardening.kconfig).
+Hardening module blocklist [here](https://github.com/FridayOrtiz/turn-that-shit-off/blob/main/hardening/hardening.conf).
 
 ## A Disturbing Morning
 
@@ -42,7 +42,7 @@ ridiculous research hypothesis that slides across my brain.  It hasn't done much
 for the cost of reviewing them, sadly.  Which is why I'm typing this with my
 human hands instead of letting the nice robot write it for me.
 
-One common theme between [CopyFail]() and [DirtyFrag]() was the exploitation of
+One common theme between [CopyFail](https://github.com/theori-io/copy-fail-CVE-2026-31431) and [DirtyFrag](https://github.com/V4bel/dirtyfrag) was the exploitation of
 relatively exotic kernel subsystems that are autoloadable, enabled by default
 across many distros, and barely used anymore (when was the last time YOU used
 AF_ALG to interact with the kernel crypto API from userspace?? I thought so
@@ -55,7 +55,7 @@ At this point, the coffee has done its thing and I am getting ready to go for a
 morning run.
 
 Claude flombulated for a bit and, thousands of tokens later, produced [this
-repository]() that did exactly that. I want to make a joke about how it took a lot
+repository](https://github.com/FridayOrtiz/turn-that-shit-off) that did exactly that. I want to make a joke about how it took a lot
 of work to go back and forth and refine the criteria until we got something I
 liked but it honestly only took a few iterations. Most of the work of churning
 through the kernel git history happened while I on my morning 10k. I find cardio
@@ -65,7 +65,7 @@ latest exploit drops.
 At this point I smell terrible, and am working on getting DirtyFrag coverage out
 our customers at $dayJob. Claude churns on.
 
-If you want to see the repo it's here: [](). I also linked it above, you should
+If you want to see the repo it's here: [github.com/FridayOrtiz/turn-that-shit-off](https://github.com/FridayOrtiz/turn-that-shit-off). I also linked it above, you should
 really click more things. It's easy and free.
 
 The repo has some specific hardening configurations, and I'll summarize some of
@@ -128,8 +128,9 @@ python3 summary_stats.py --out quiet-orphans.md --label "Truly quiet orphans" \
    commit touching any matched file is in year ≤ N. Controls the "ancient code"
    axis. The intuition: code from before ~2010 predates the era when kernel
    security got serious attention (KASAN, Smatch, syzkaller all came later) and the
-   original authors have mostly moved on. The default 2010 brackets algif_aead
-   (CopyFail, ~2010) and rxrpc/esp4/esp6 (DirtyFrag, all 2005–2007). Lift to 2014
+   original authors have mostly moved on. The default 2010 brackets the AF_ALG/algif_aead
+   family (CopyFail; AF_ALG core landed in 2.6.38 / March 2011, algif_aead
+   specifically went in around 2014) and rxrpc/esp4/esp6 (DirtyFrag, all 2005–2007). Lift to 2014
    or 2016 to catch newer code that's already aging. Note that first_year is
    bounded by 2005-04 (start of git-managed kernel history) — anything =2005
    actually means "older than git history" and the cutoff treats them all the same.
@@ -191,14 +192,14 @@ was just running numbers on vibes until CopyFail and DirtyFrag shook out.
 Here's the actual process we went through to get here, according to Claude
 itself. Cleaned up for coherence.
 
-1. Phase 1: per-MAINTAINERS-section score. `score.py` adds up the
+1. Phase 1+2: per-MAINTAINERS-section score. `score.py` adds up the
    axes listed at the top — ancient code, autoload signals,
    paged-skb signals, low-activity, high-fix-ratio, CVE history,
    default-y, in-defconfig — minus a maintainer penalty (M: lines)
    and a crowd penalty for sections with 300+ recent authors. Cap
    is around 16, anything above 8 is a strong candidate.
 
-2. Phase 2: per-Kconfig-symbol score. This is where it gets
+2. Phase 2.5: per-Kconfig-symbol score. This is where it gets
    interesting. `kconfig_index.py` parses every `Kconfig` file in
    the tree. `build_select_graph.py` builds the cross-symbol
    `select` graph; the in-degree of a symbol tells you how many
@@ -210,7 +211,7 @@ itself. Cleaned up for coherence.
    inherited section signals, crowd-penalty downweighted ×0.25
    when the symbol has ≤5 attributed source files.
 
-3. Phase 3: False positives in the structurally-niche set. There are a lot.
+3. Triage: false positives in the structurally-niche set. There are a lot.
    `TUN`, `VETH`, `VXLAN`, `GENEVE`, `MACVLAN` — every container
    runtime. `PACKET` — tcpdump, Wireshark, eBPF. `BLK_DEV_LOOP`,
    `BLK_DEV_RAM` — squashfs, qemu-nbd. `IPV6` (yes, it scores
@@ -379,7 +380,7 @@ CephFS is no longer just for cluster admins! Proxmox mounts it by default,
 Rook-managed Kubernetes nodes use it, microceph put a cluster in your laptop. So
 `mount -t ceph` before disabling.
 
-The full conditional list is in [`hardening.conf`][conf] under the
+The full conditional list is in [`hardening.conf`][^conf] under the
 `CHECK FIRST` headers. Each block has the exact one-liner you can
 run to determine if you're safe to disable.
 
@@ -456,13 +457,14 @@ Well, let's ask it!  Hey Claude, what's new?
 
 There's also academic work — Kurmus et al.'s NDSS 2017 paper on attack-surface
 metrics, the ktrim work out of TU Braunschweig — and this audit's per-symbol
-score is loosely downstream of that framing.  The contribution here, I suppose,
-is "functioning operator-facing pipeline that catches what the compliance lists
-are 2-4 years behind on."
+score is in the same category. It would be silly to pretend academic precedent
+doesn't exist; the score formula itself is bespoke.  The contribution here,
+I suppose, is "functioning operator-facing pipeline that catches what the
+compliance lists are 2-4 years behind on."
 
 ## I want to harden my laptop, but not so hard it becomes a brick, can you help?
 
-The deliverables are in [the audit repo TBD]:
+The deliverables are in [the audit repo](https://github.com/FridayOrtiz/turn-that-shit-off):
 
 - `hardening.conf` — drop into `/etc/modprobe.d/`, rebuild
   initramfs (`update-initramfs -u`, `dracut -f`, or `mkinitcpio -P`,
@@ -529,4 +531,4 @@ In no particular order...
 I don't know why it felt the need to caveat that this is not a kernel policy
 proposal.  Like, obviously? Welp. See ya later!
 
-[conf]: /assets/hardening.conf
+[conf]: https://github.com/FridayOrtiz/turn-that-shit-off/blob/main/hardening/hardening.conf
