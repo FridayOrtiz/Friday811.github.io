@@ -15,6 +15,16 @@ things you should probably just disable.
 Hardening Kconfig [here](https://github.com/FridayOrtiz/turn-that-shit-off/blob/main/hardening/hardening.kconfig).
 Hardening module blocklist [here](https://github.com/FridayOrtiz/turn-that-shit-off/blob/main/hardening/hardening.conf).
 
+If you want a quick and dirty check...
+
+```
+git clone git@github.com:FridayOrtiz/turn-that-shit-off.git
+cd turn-that-shit-off/hardening
+sudo HARDENING_CONF=$(pwd)/hardening.conf ./verify.sh --probe
+```
+
+This will compare the hardening list against what's loadable on your system.
+
 ## A Disturbing Morning
 
 I awoke this morning to something terrible: a message from a friend containing
@@ -63,7 +73,7 @@ helps me stay centered when we receive panicked calls from customers about the
 latest exploit drops.
 
 At this point I smell terrible, and am working on getting DirtyFrag coverage out
-our customers at $dayJob. Claude churns on.
+to our customers at $dayJob. Claude churns on.
 
 If you want to see the repo it's here: [github.com/FridayOrtiz/turn-that-shit-off](https://github.com/FridayOrtiz/turn-that-shit-off). I also linked it above, you should
 really click more things. It's easy and free.
