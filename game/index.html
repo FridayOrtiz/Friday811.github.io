@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Project Space Whale</title>
+    <style>
+      html, body { margin: 0; height: 100%; overflow: hidden; background: #0b0b0f; }
+      canvas { width: 100%; height: 100%; display: block; }
+    </style>
+    <!-- Trunk builds this crate to wasm and injects the loader. -->
+    
+<script type="module">
+import init, * as bindings from '/game/gui-483211c441fa7604.js';
+const wasm = await init({ module_or_path: '/game/gui-483211c441fa7604_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+  <link rel="modulepreload" href="/game/gui-483211c441fa7604.js" crossorigin="anonymous" integrity="sha384-E5KlnxCcnTDE+E2fA8TFWNStmk0dMInApQv73rkZefvJCuJxHC1eq9M0u9u9tjkr"><link rel="modulepreload" href="/game/snippets/gui-458892a867b8c12f/inline0.js" crossorigin="anonymous" integrity="sha384-Ja02ZM8NU5x0c3nmhuhKmQ8m1IKNLfIM/lFSaI1+I6ppXrbkwhfOCuVfkQXPfUv1"><link rel="preload" href="/game/gui-483211c441fa7604_bg.wasm" crossorigin="anonymous" integrity="sha384-WZ+M7rPs6uOgxeo55Dg8VXJYiAnaOApDKDimDCbV8Oq7x5G/0mnrmdqCPv6jAn01" as="fetch" type="application/wasm"></head>
+  <body>
+    <canvas id="the_canvas_id"></canvas>
+  </body>
+</html>
