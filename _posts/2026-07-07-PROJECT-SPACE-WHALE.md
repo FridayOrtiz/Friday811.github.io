@@ -17,7 +17,7 @@ time, and goes into how the team dealt with (or failed to deal with) the fact
 that everyone wants to be a Jedi in a world that canonically can't have many
 Jedi.  It's a great documentary. You should check it out.
 
-> Friend: https://youtu.be/UAv0LYLQi5c @Friday you may enjoy this
+> Friend: https://youtu.be/UAv0LYLQi5c @Friday you may enjoy this  \
 > Me: tragic that there can never be another mmo like this
 
 SWG came about in an era where the line between the MUDs of the past and the
