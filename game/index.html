@@ -11,8 +11,8 @@
     <!-- Trunk builds this crate to wasm and injects the loader. -->
     
 <script type="module">
-import init, * as bindings from '/game/gui-9bc534fdd357e85e.js';
-const wasm = await init({ module_or_path: '/game/gui-9bc534fdd357e85e_bg.wasm' });
+import init, * as bindings from '/game/gui-5282ef3acb69ac99.js';
+const wasm = await init({ module_or_path: '/game/gui-5282ef3acb69ac99_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -21,7 +21,7 @@ window.wasmBindings = bindings;
 dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
 
 </script>
-  <link rel="modulepreload" href="/game/gui-9bc534fdd357e85e.js" crossorigin="anonymous" integrity="sha384-8vndeddq/2xGKUS8dGH9yboiiCHY99izqfxvAycnocZlSbjJQCo7P4WySGCdW+Hj"><link rel="modulepreload" href="/game/snippets/gui-458892a867b8c12f/inline0.js" crossorigin="anonymous" integrity="sha384-Ja02ZM8NU5x0c3nmhuhKmQ8m1IKNLfIM/lFSaI1+I6ppXrbkwhfOCuVfkQXPfUv1"><link rel="preload" href="/game/gui-9bc534fdd357e85e_bg.wasm" crossorigin="anonymous" integrity="sha384-qsyf1Xirhsan+rNIY3cEjhbFXIxm2BUmca0rXGULVI+O/Vbndif3Foeu5qexU6eN" as="fetch" type="application/wasm"></head>
+  <link rel="modulepreload" href="/game/gui-5282ef3acb69ac99.js" crossorigin="anonymous" integrity="sha384-8vndeddq/2xGKUS8dGH9yboiiCHY99izqfxvAycnocZlSbjJQCo7P4WySGCdW+Hj"><link rel="modulepreload" href="/game/snippets/gui-458892a867b8c12f/inline0.js" crossorigin="anonymous" integrity="sha384-Ja02ZM8NU5x0c3nmhuhKmQ8m1IKNLfIM/lFSaI1+I6ppXrbkwhfOCuVfkQXPfUv1"><link rel="preload" href="/game/gui-5282ef3acb69ac99_bg.wasm" crossorigin="anonymous" integrity="sha384-zyDaVUAfDJxyTbptPo/MUYH3dFHv5Zq098QHmf68pKK9IbvG3wq1/D5W+TMSsCXE" as="fetch" type="application/wasm"></head>
   <body>
     <canvas id="the_canvas_id"></canvas>
   </body>
