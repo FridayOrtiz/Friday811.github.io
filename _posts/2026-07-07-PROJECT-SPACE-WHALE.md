@@ -123,11 +123,21 @@ money to JK Rowling." Yours is up to you.
 
 ## jk... unless??
 
-"Okay, but you still could've paid an artist!" Well, I'd like to, but I'm not
+Okay so the placeholder art is so bad and it's bothering me so much that despite
+nobody playing this game but me I will be purchasing assets made by real humans
+and rendering from those instead. I thought I could ignore it but wow. Then I
+thought I could fix it in aseprite and double wow. I'd rather pay a human creator
+$500 than deal with cleaning up this garbage.
+
+I also rewrote all the prose by hand. It took hours. Days, even. I'm not a great
+writer, but I'm certainly a better writer than the incoherent nonsense these
+language models produce. 
+
+~~"Okay, but you still could've paid an artist!" Well, I'd like to, but I'm not
 going to for a silly little hobby project nobody is interested in. I certainly
 wouldn't charge money for slop. If by some weird confluence of fate people do
 start playing this thing, I'd love to pay an actual writer to clean things up,
-and an actual artist to build assets.
+and an actual artist to build assets.~~
 
-Until then, I will keep hacking away at this thing. Adding little features and
-little tasks to my little toybox that anyone is invited to come stomp around in.
+~~Until then, I will keep hacking away at this thing. Adding little features and
+little tasks to my little toybox that anyone is invited to come stomp around in.~~
