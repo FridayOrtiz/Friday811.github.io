@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Project Space Whale</title>
+    <style>
+      html, body { margin: 0; height: 100%; overflow: hidden; background: #0b0b0f; }
+      /* winit gives the canvas a tabindex so it can take keyboard focus; without this the
+         browser draws a focus ring around the whole client. eframe used to set the same
+         property from Rust. */
+      canvas { width: 100%; height: 100%; display: block; outline: none; }
+    </style>
+    <!-- Trunk builds this crate to wasm and injects the loader. wasm-opt is off: bevy emits
+         bulk-memory ops that trunk's bundled wasm-opt rejects without --enable-bulk-memory,
+         and running it by hand barely moves the compressed transfer size. -->
+    
+<script type="module">
+import init, * as bindings from '/game/webgpu/gui-cf4922d51e5935d3.js';
+const wasm = await init({ module_or_path: '/game/webgpu/gui-cf4922d51e5935d3_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+    <!-- Runtime-loaded assets: the two directories the AssetServer fetches at RUNTIME, and
+         only those. The rest of crates/gui/assets is PNGs that `include_bytes!` already bakes
+         into the binary, and shipping those again would double their weight for nothing.
+         bevy fetches these over HTTP on wasm, so a missing copy is not a build error -- it is
+         pilots stuck as capsules, or a deck that draws plain white where its surface should
+         be. Anything the client `asset_server.load()`s by path belongs on this list. -->
+    
+    
+  <link rel="modulepreload" href="/game/webgpu/gui-cf4922d51e5935d3.js" crossorigin="anonymous" integrity="sha384-8MoZOS7OsJJQTTO3c2VRZTKjnR4f2PU6VH81hLD1ZsLCSpoguv3nDsyyzN5YMDH7"><link rel="modulepreload" href="/game/webgpu/snippets/gui-458892a867b8c12f/inline0.js" crossorigin="anonymous" integrity="sha384-Ja02ZM8NU5x0c3nmhuhKmQ8m1IKNLfIM/lFSaI1+I6ppXrbkwhfOCuVfkQXPfUv1"><link rel="preload" href="/game/webgpu/gui-cf4922d51e5935d3_bg.wasm" crossorigin="anonymous" integrity="sha384-sz6ODHL0xLCxjBBt2GCA8hUr0PWCCbsS3N5SEn5wcABgFcEoogSdD36VufvzY2at" as="fetch" type="application/wasm"></head>
+  <body>
+    <canvas id="the_canvas_id"></canvas>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Project Space Whale</title>
+    <style>
+      html, body { margin: 0; height: 100%; background: #0b0b0f; color: #7a829e;
+                   font: 14px ui-monospace, SFMono-Regular, Menlo, monospace; }
+      main { display: grid; place-items: center; height: 100%; }
+    </style>
+  </head>
+  <body>
+    <main><p id="msg">powering up...</p></main>
+    <script type="module">
+      // A bevy binary compiles in exactly one web backend (bevy#13168), so the choice of which
+      // one a browser gets happens here rather than at build time. Both bundles are built by
+      // build-web.sh; each visitor downloads one of them.
+      //
+      // Feature-detecting `navigator.gpu` is not enough: a browser can expose the API and still
+      // hand back no adapter — headless sessions, blocklisted drivers, software compositing —
+      // which fails deep inside wgpu with "Unable to find a GPU!" long after the point where
+      // anything could recover. So actually ask for the adapter before committing to WebGPU.
+      //
+      // WebGL2 is the fallback and the safe answer: as of 2026 Firefox still ships WebGPU
+      // disabled by default on every platform.
+      let target = 'webgl2/';
+      try {
+        if (navigator.gpu && (await navigator.gpu.requestAdapter())) {
+          target = 'webgpu/';
+        }
+      } catch (_) {
+        // Any throw at all means WebGPU is not usable here. WebGL2 it is.
+      }
+      location.replace(target);
+    </script>
+  </body>
+</html>
