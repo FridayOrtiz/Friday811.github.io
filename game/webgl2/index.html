@@ -16,8 +16,8 @@
          and running it by hand barely moves the compressed transfer size. -->
     
 <script type="module">
-import init, * as bindings from '/game/webgl2/gui-cd3f55daabe39aac.js';
-const wasm = await init({ module_or_path: '/game/webgl2/gui-cd3f55daabe39aac_bg.wasm' });
+import init, * as bindings from '/game/webgl2/gui-aebbd2e305f63304.js';
+const wasm = await init({ module_or_path: '/game/webgl2/gui-aebbd2e305f63304_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -34,7 +34,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
          be. Anything the client `asset_server.load()`s by path belongs on this list. -->
     
     
-  <link rel="modulepreload" href="/game/webgl2/gui-cd3f55daabe39aac.js" crossorigin="anonymous" integrity="sha384-zyQ8qWYJ9dlEBWSN0BxmEKLtRPwTT+XqrMcvypc8VF+A/tWhiTrRVf3MX9ZrmElN"><link rel="modulepreload" href="/game/webgl2/snippets/gui-458892a867b8c12f/inline0.js" crossorigin="anonymous" integrity="sha384-Ja02ZM8NU5x0c3nmhuhKmQ8m1IKNLfIM/lFSaI1+I6ppXrbkwhfOCuVfkQXPfUv1"><link rel="preload" href="/game/webgl2/gui-cd3f55daabe39aac_bg.wasm" crossorigin="anonymous" integrity="sha384-KS5Wg2KAc10UZI+ijJzmdHfLQnHZahFbVusjvoGk7fcapYXy/jMGjPlyjj+b6/x9" as="fetch" type="application/wasm"></head>
+  <link rel="modulepreload" href="/game/webgl2/gui-aebbd2e305f63304.js" crossorigin="anonymous" integrity="sha384-czXMYu35obX0H6roSTZ0+hFhzoeWsWJ+mc1VFBwcau0z/AQbR9vunmA2Oa1910EX"><link rel="modulepreload" href="/game/webgl2/snippets/gui-458892a867b8c12f/inline0.js" crossorigin="anonymous" integrity="sha384-Ja02ZM8NU5x0c3nmhuhKmQ8m1IKNLfIM/lFSaI1+I6ppXrbkwhfOCuVfkQXPfUv1"><link rel="preload" href="/game/webgl2/gui-aebbd2e305f63304_bg.wasm" crossorigin="anonymous" integrity="sha384-fsSzNss9ko5euwVFAOFOTYhbfMaJ66hlYOIPvMsOwPnepjTzL32DB+XkMZGjc7JE" as="fetch" type="application/wasm"></head>
   <body>
     <canvas id="the_canvas_id"></canvas>
   </body>
