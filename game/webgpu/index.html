@@ -16,8 +16,8 @@
          and running it by hand barely moves the compressed transfer size. -->
     
 <script type="module">
-import init, * as bindings from '/game/webgpu/gui-f06317d6684f7955.js';
-const wasm = await init({ module_or_path: '/game/webgpu/gui-f06317d6684f7955_bg.wasm' });
+import init, * as bindings from '/game/webgpu/gui-17f521f045ab28e5.js';
+const wasm = await init({ module_or_path: '/game/webgpu/gui-17f521f045ab28e5_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -34,7 +34,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
          be. Anything the client `asset_server.load()`s by path belongs on this list. -->
     
     
-  <link rel="modulepreload" href="/game/webgpu/gui-f06317d6684f7955.js" crossorigin="anonymous" integrity="sha384-os/Rl9BekeCWqy2/vA5hkVTJqe2LEk3nvFC1ppY4AINkD7Cw+t/J2jyBO/4n6a9o"><link rel="modulepreload" href="/game/webgpu/snippets/gui-458892a867b8c12f/inline0.js" crossorigin="anonymous" integrity="sha384-Ja02ZM8NU5x0c3nmhuhKmQ8m1IKNLfIM/lFSaI1+I6ppXrbkwhfOCuVfkQXPfUv1"><link rel="preload" href="/game/webgpu/gui-f06317d6684f7955_bg.wasm" crossorigin="anonymous" integrity="sha384-yOF29IvHCckxM/ZABPypF4WmE4yiRY+kki5JkaCZ7imILNBTXRLGX0MCy/w1tERB" as="fetch" type="application/wasm"></head>
+  <link rel="modulepreload" href="/game/webgpu/gui-17f521f045ab28e5.js" crossorigin="anonymous" integrity="sha384-M074+7OOiHf/imsNZDxRNLpXUSTGbi7jNJrOQnK3jLZFwq2qZNvawVR2QiEmz0uc"><link rel="modulepreload" href="/game/webgpu/snippets/gui-458892a867b8c12f/inline0.js" crossorigin="anonymous" integrity="sha384-Ja02ZM8NU5x0c3nmhuhKmQ8m1IKNLfIM/lFSaI1+I6ppXrbkwhfOCuVfkQXPfUv1"><link rel="preload" href="/game/webgpu/gui-17f521f045ab28e5_bg.wasm" crossorigin="anonymous" integrity="sha384-QOMfV3kj+jnjeWZnoMF+knfqeCh7c06AW9+UM94Tt7dMGXKj7dVTcJU8CYDF+jYC" as="fetch" type="application/wasm"></head>
   <body>
     <canvas id="the_canvas_id"></canvas>
   </body>
