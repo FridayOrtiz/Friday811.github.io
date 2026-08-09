@@ -11,13 +11,46 @@
          property from Rust. */
       canvas { width: 100%; height: 100%; display: block; outline: none; }
     </style>
+    <!-- Browsers create every AudioContext SUSPENDED until a user gesture, and the audio
+         stack (bevy -> rodio -> cpal) builds its context at startup — before any gesture —
+         and never asks again. Without this shim the whole game plays into a stopped clock:
+         no error anywhere, just silence. Wrap the constructor so every context the wasm
+         makes is remembered, and kick any suspended one awake on each interaction (kept
+         registered, not once — a tab backgrounded long enough can suspend it again). Must
+         run BEFORE the trunk loader below so the wrap is in place when the wasm boots. -->
+    <script>
+      (function () {
+        var Real = window.AudioContext || window.webkitAudioContext;
+        if (!Real) return;
+        var made = [];
+        var Wrapped = function () {
+          var c = new (Function.prototype.bind.apply(
+            Real,
+            [null].concat([].slice.call(arguments))
+          ))();
+          made.push(c);
+          return c;
+        };
+        Wrapped.prototype = Real.prototype;
+        window.AudioContext = Wrapped;
+        if (window.webkitAudioContext) window.webkitAudioContext = Wrapped;
+        var kick = function () {
+          made.forEach(function (c) {
+            if (c.state === "suspended") c.resume();
+          });
+        };
+        ["pointerdown", "keydown", "touchstart"].forEach(function (e) {
+          window.addEventListener(e, kick, { capture: true });
+        });
+      })();
+    </script>
     <!-- Trunk builds this crate to wasm and injects the loader. wasm-opt is off: bevy emits
          bulk-memory ops that trunk's bundled wasm-opt rejects without --enable-bulk-memory,
          and running it by hand barely moves the compressed transfer size. -->
     
 <script type="module">
-import init, * as bindings from '/game/webgpu/gui-839c14326d7381ba.js';
-const wasm = await init({ module_or_path: '/game/webgpu/gui-839c14326d7381ba_bg.wasm' });
+import init, * as bindings from '/game/webgpu/gui-5204ba4b7f4d8943.js';
+const wasm = await init({ module_or_path: '/game/webgpu/gui-5204ba4b7f4d8943_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -34,7 +67,14 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
          be. Anything the client `asset_server.load()`s by path belongs on this list. -->
     
     
-  <link rel="modulepreload" href="/game/webgpu/gui-839c14326d7381ba.js" crossorigin="anonymous" integrity="sha384-mPCV8OIjX3xi6HRwv5W1l3MiZRGdD7HZRFFIytullgIATS6MxFXT74l2Ceu+9E5N"><link rel="modulepreload" href="/game/webgpu/snippets/gui-458892a867b8c12f/inline0.js" crossorigin="anonymous" integrity="sha384-Ja02ZM8NU5x0c3nmhuhKmQ8m1IKNLfIM/lFSaI1+I6ppXrbkwhfOCuVfkQXPfUv1"><link rel="preload" href="/game/webgpu/gui-839c14326d7381ba_bg.wasm" crossorigin="anonymous" integrity="sha384-9Km+e1TWVIxIsdXAb0wZAZngJ7VmLMC2Cxi5D4i7xkH+B2EdO+bLW9WyBgjReFYr" as="fetch" type="application/wasm"></head>
+    <!-- The equipment icons (#281's baked set). Absent from the staging, every icons/ request
+         fell through to this page's own HTML — an "Invalid PNG signature" per icon. -->
+    
+    <!-- The soundtrack, staged as files: on the web the browser's <audio> elements stream
+         these (see system_map_3d's web_audio), keeping five megabytes out of the wasm and
+         the vorbis decode off the main thread. -->
+    
+  <link rel="modulepreload" href="/game/webgpu/gui-5204ba4b7f4d8943.js" crossorigin="anonymous" integrity="sha384-vBisMosAm7MQPvZZt8XmAlHJdm4UsQ0X/Tlf8urYOMg3jQexSplCtj6VCY1jZANM"><link rel="modulepreload" href="/game/webgpu/snippets/gui-458892a867b8c12f/inline0.js" crossorigin="anonymous" integrity="sha384-Ja02ZM8NU5x0c3nmhuhKmQ8m1IKNLfIM/lFSaI1+I6ppXrbkwhfOCuVfkQXPfUv1"><link rel="preload" href="/game/webgpu/gui-5204ba4b7f4d8943_bg.wasm" crossorigin="anonymous" integrity="sha384-OTs7ZjQZito5f2wQoIQ7KP4sXzmqNkCcwfRRK+jzWYJDwJF+e4HlQHVbVxRxyTWL" as="fetch" type="application/wasm"></head>
   <body>
     <canvas id="the_canvas_id"></canvas>
   </body>
