@@ -7,6 +7,9 @@
       html, body { margin: 0; height: 100%; background: #0b0b0f; color: #7a829e;
                    font: 14px ui-monospace, SFMono-Regular, Menlo, monospace; }
       main { display: grid; place-items: center; height: 100%; }
+      /* Wide enough for "powering up...", bounded for the failure line below it, which is three
+         sentences and would otherwise run the full width of a desktop window. */
+      #msg { max-width: 34em; margin: 0 1.5em; text-align: center; line-height: 1.5; }
     </style>
   </head>
   <body>
@@ -16,22 +19,52 @@
       // one a browser gets happens here rather than at build time. Both bundles are built by
       // build-web.sh; each visitor downloads one of them.
       //
-      // Feature-detecting `navigator.gpu` is not enough: a browser can expose the API and still
-      // hand back no adapter — headless sessions, blocklisted drivers, software compositing —
-      // which fails deep inside wgpu with "Unable to find a GPU!" long after the point where
-      // anything could recover. So actually ask for the adapter before committing to WebGPU.
+      // BOTH candidates are tested for real, and neither test is a feature check. A browser can
+      // expose `navigator.gpu` and still hand back no adapter — headless sessions, blocklisted
+      // drivers, software compositing — and it can equally advertise WebGL2 and refuse the
+      // context: hardware acceleration switched off, a driver on the blocklist, or a GPU process
+      // that has already crashed this session. Either way the refusal surfaces deep inside wgpu,
+      // long past the point where anything could recover, and what a pilot gets is a wall of wasm
+      // stack. So ask for an adapter, and ask for a context, before committing to a bundle.
       //
-      // WebGL2 is the fallback and the safe answer: as of 2026 Firefox still ships WebGPU
-      // disabled by default on every platform.
-      let target = 'webgl2/';
-      try {
-        if (navigator.gpu && (await navigator.gpu.requestAdapter())) {
-          target = 'webgpu/';
+      // WebGPU is preferred where it works. WebGL2 is the one that runs nearly everywhere: as of
+      // 2026 Firefox still ships WebGPU disabled by default on every platform.
+
+      async function webgpuWorks() {
+        try {
+          return !!(navigator.gpu && (await navigator.gpu.requestAdapter()));
+        } catch (_) {
+          return false;
         }
-      } catch (_) {
-        // Any throw at all means WebGPU is not usable here. WebGL2 it is.
       }
-      location.replace(target);
+
+      function webgl2Works() {
+        try {
+          // A THROWAWAY canvas, never one the client will want. A canvas that has handed out one
+          // kind of context can never hand out another, so probing the real one would cause the
+          // exact failure this is here to catch. Hand the context straight back afterwards:
+          // browsers cap how many can be live at once and drop the oldest to stay under it.
+          const probe = document.createElement('canvas');
+          const gl = probe.getContext('webgl2', { antialias: false });
+          if (!gl) return false;
+          const release = gl.getExtension('WEBGL_lose_context');
+          if (release) release.loseContext();
+          return true;
+        } catch (_) {
+          return false;
+        }
+      }
+
+      if (await webgpuWorks()) {
+        location.replace('webgpu/');
+      } else if (webgl2Works()) {
+        location.replace('webgl2/');
+      } else {
+        // Redirecting anyway would land a pilot in a bundle that panics on its first frame.
+        document.getElementById('msg').textContent =
+          'No WebGL2 and no WebGPU in this browser. The client needs one of them to draw. ' +
+          'Hardware acceleration turned off is the usual cause.';
+      }
     </script>
   </body>
 </html>
