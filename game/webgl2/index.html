@@ -70,6 +70,10 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     <!-- The equipment icons (#281's baked set). Absent from the staging, every icons/ request
          fell through to this page's own HTML — an "Invalid PNG signature" per icon. -->
     
+    <!-- The skin mask's fragment shader. `Material::fragment_shader` returns a PATH, so bevy
+         fetches it over HTTP like any other asset; absent from the staging, the material never
+         builds and the pilot's body draws nothing at all. -->
+    
     <!-- The soundtrack, staged as files: on the web the browser's <audio> elements stream
          these (see system_map_3d's web_audio), keeping five megabytes out of the wasm and
          the vorbis decode off the main thread. -->
