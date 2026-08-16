@@ -49,8 +49,8 @@
          and running it by hand barely moves the compressed transfer size. -->
     
 <script type="module">
-import init, * as bindings from '/game/webgl2/gui-bf88d2bcc4e79868.js';
-const wasm = await init({ module_or_path: '/game/webgl2/gui-bf88d2bcc4e79868_bg.wasm' });
+import init, * as bindings from '/game/webgl2/gui-89bc9fe390039135.js';
+const wasm = await init({ module_or_path: '/game/webgl2/gui-89bc9fe390039135_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -78,7 +78,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
          these (see system_map_3d's web_audio), keeping five megabytes out of the wasm and
          the vorbis decode off the main thread. -->
     
-  <link rel="modulepreload" href="/game/webgl2/gui-bf88d2bcc4e79868.js" crossorigin="anonymous" integrity="sha384-6qaduy4Dn1n3sHjrOZkwkhA5G+ddA7utPfxEF3WlX7QmwTgwJxi0BBr0h7iYrF97"><link rel="modulepreload" href="/game/webgl2/snippets/gui-458892a867b8c12f/inline0.js" crossorigin="anonymous" integrity="sha384-Ja02ZM8NU5x0c3nmhuhKmQ8m1IKNLfIM/lFSaI1+I6ppXrbkwhfOCuVfkQXPfUv1"><link rel="preload" href="/game/webgl2/gui-bf88d2bcc4e79868_bg.wasm" crossorigin="anonymous" integrity="sha384-oAhYtG1n0siF5W5nahpSAc7ZR1UwTBpIHn+oxrN4yf8CvYEODTs8tuUYSZ08+zFm" as="fetch" type="application/wasm"></head>
+  <link rel="modulepreload" href="/game/webgl2/gui-89bc9fe390039135.js" crossorigin="anonymous" integrity="sha384-wVtFYP07iutBwdkr3NB4MNmabvr1AKQos+w7yWlxa9e4xOiO3/DR8R+atgSWiRqI"><link rel="modulepreload" href="/game/webgl2/snippets/gui-458892a867b8c12f/inline0.js" crossorigin="anonymous" integrity="sha384-Ja02ZM8NU5x0c3nmhuhKmQ8m1IKNLfIM/lFSaI1+I6ppXrbkwhfOCuVfkQXPfUv1"><link rel="preload" href="/game/webgl2/gui-89bc9fe390039135_bg.wasm" crossorigin="anonymous" integrity="sha384-62fP0l6g8zLQgfrJmUmQJ/Nb6mlBvG71R5cwGeXgoA/8FPCbX2AyTmTEW/DCLIhz" as="fetch" type="application/wasm"></head>
   <body>
     <canvas id="the_canvas_id"></canvas>
   </body>
