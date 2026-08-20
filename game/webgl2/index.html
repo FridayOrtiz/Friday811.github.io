@@ -49,8 +49,8 @@
          and running it by hand barely moves the compressed transfer size. -->
     
 <script type="module">
-import init, * as bindings from '/game/webgl2/gui-85879dcdb653fce1.js';
-const wasm = await init({ module_or_path: '/game/webgl2/gui-85879dcdb653fce1_bg.wasm' });
+import init, * as bindings from '/game/webgl2/gui-57756c0006177b74.js';
+const wasm = await init({ module_or_path: '/game/webgl2/gui-57756c0006177b74_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -70,6 +70,10 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     <!-- The equipment icons (#281's baked set). Absent from the staging, every icons/ request
          fell through to this page's own HTML — an "Invalid PNG signature" per icon. -->
     
+    <!-- The item emblem pool. Copied wholesale like the prop meshes and pruned the same way:
+         the repo carries 199 for an author to pick from, and web/prune-assets.sh keeps only the
+         ones some item in data/ actually names. -->
+    
     <!-- The skin mask's fragment shader. `Material::fragment_shader` returns a PATH, so bevy
          fetches it over HTTP like any other asset; absent from the staging, the material never
          builds and the pilot's body draws nothing at all. -->
@@ -78,7 +82,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
          these (see system_map_3d's web_audio), keeping five megabytes out of the wasm and
          the vorbis decode off the main thread. -->
     
-  <link rel="modulepreload" href="/game/webgl2/gui-85879dcdb653fce1.js" crossorigin="anonymous" integrity="sha384-B0NUXoV9JsgDv1ygB0r044wW5OekZ7qKOeczObJe5q9L6t8pIs0S83gNnj2KY8Jp"><link rel="modulepreload" href="/game/webgl2/snippets/gui-458892a867b8c12f/inline0.js" crossorigin="anonymous" integrity="sha384-Ja02ZM8NU5x0c3nmhuhKmQ8m1IKNLfIM/lFSaI1+I6ppXrbkwhfOCuVfkQXPfUv1"><link rel="preload" href="/game/webgl2/gui-85879dcdb653fce1_bg.wasm" crossorigin="anonymous" integrity="sha384-xIvURngXPWFH2RQ/w+bqRSuTyDqjyZ/BOIAm2z6RKJXb/zJpX7S4N9FardksEe05" as="fetch" type="application/wasm"></head>
+  <link rel="modulepreload" href="/game/webgl2/gui-57756c0006177b74.js" crossorigin="anonymous" integrity="sha384-w9bJGOoBqQ3mwm5sMIqBh/nyb/zIKE6Gn6BKeWnR/+pkZVOKmPUHSNMYMmA4UWiA"><link rel="modulepreload" href="/game/webgl2/snippets/gui-458892a867b8c12f/inline0.js" crossorigin="anonymous" integrity="sha384-Ja02ZM8NU5x0c3nmhuhKmQ8m1IKNLfIM/lFSaI1+I6ppXrbkwhfOCuVfkQXPfUv1"><link rel="preload" href="/game/webgl2/gui-57756c0006177b74_bg.wasm" crossorigin="anonymous" integrity="sha384-42/SZ5r7yWSDl/PCxxHGqkcaS0U8a2PT2IyI7NroCJbN48dSF/XofBYdfSu9/CEU" as="fetch" type="application/wasm"></head>
   <body>
     <canvas id="the_canvas_id"></canvas>
   </body>
