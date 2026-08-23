@@ -55,6 +55,22 @@
         }
       }
 
+      // The asset cache (sw.js, beside this file): cache-first for the bundles and the asset
+      // tree, so a returning pilot fetches nothing they already have whatever cache headers the
+      // host sends. Registered from here — the one page every visit passes through — and scoped
+      // at the deploy root so it covers both backend directories. `register` only STARTS the
+      // install; the browser finishes it on its own even though this page immediately redirects
+      // away, and worst case it completes in time for the next visit instead. The persistence
+      // request beside it asks the browser not to treat a quarter-gigabyte of game art as the
+      // first thing to shed under disk pressure; browsers grant it silently or not at all, so
+      // there is nothing to handle.
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js').catch(() => {});
+        if (navigator.storage && navigator.storage.persist) {
+          navigator.storage.persist().catch(() => {});
+        }
+      }
+
       if (await webgpuWorks()) {
         location.replace('webgpu/');
       } else if (webgl2Works()) {
