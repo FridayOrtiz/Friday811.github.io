@@ -49,8 +49,8 @@
          and running it by hand barely moves the compressed transfer size. -->
     
 <script type="module">
-import init, * as bindings from '/game/webgpu/gui-fa1734f1759ae22a.js';
-const wasm = await init({ module_or_path: '/game/webgpu/gui-fa1734f1759ae22a_bg.wasm' });
+import init, * as bindings from '/game/webgpu/gui-fe78641e95f6633f.js';
+const wasm = await init({ module_or_path: '/game/webgpu/gui-fe78641e95f6633f_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -71,7 +71,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
          fell through to this page's own HTML — an "Invalid PNG signature" per icon. -->
     
     <!-- The item emblem pool. Copied wholesale like the prop meshes and pruned the same way:
-         the repo carries 199 for an author to pick from, and web/prune-assets.sh keeps only the
+         the repo carries 199 for an author to pick from, and prune-assets.sh keeps only the
          ones some item in data/ actually names. -->
     
     <!-- The skin mask's fragment shader. `Material::fragment_shader` returns a PATH, so bevy
@@ -82,7 +82,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
          these (see system_map_3d's web_audio), keeping five megabytes out of the wasm and
          the vorbis decode off the main thread. -->
     
-  <link rel="modulepreload" href="/game/webgpu/gui-fa1734f1759ae22a.js" crossorigin="anonymous" integrity="sha384-mz7x7V8cDfBP0/PtIJXdFX0JXsGYiqNrAW3MFZPvtslR/lAO8gNGMMOhYpmWw0Od"><link rel="modulepreload" href="/game/webgpu/snippets/gui-458892a867b8c12f/inline0.js" crossorigin="anonymous" integrity="sha384-Ja02ZM8NU5x0c3nmhuhKmQ8m1IKNLfIM/lFSaI1+I6ppXrbkwhfOCuVfkQXPfUv1"><link rel="preload" href="/game/webgpu/gui-fa1734f1759ae22a_bg.wasm" crossorigin="anonymous" integrity="sha384-efWdMmqMePTvP7Fvvy/Otm9ZBZ/ncsO4QouMC2abFht4COwWaJvvY5fCJCebGcQZ" as="fetch" type="application/wasm"></head>
+  <link rel="modulepreload" href="/game/webgpu/gui-fe78641e95f6633f.js" crossorigin="anonymous" integrity="sha384-ZZiIk4okiGJoHR0hx5LREN0cKhOz6l+13ZmyQ1q8QeuSJLjy+If5uxh3olvVGCUs"><link rel="modulepreload" href="/game/webgpu/snippets/gui-458892a867b8c12f/inline0.js" crossorigin="anonymous" integrity="sha384-Ja02ZM8NU5x0c3nmhuhKmQ8m1IKNLfIM/lFSaI1+I6ppXrbkwhfOCuVfkQXPfUv1"><link rel="preload" href="/game/webgpu/gui-fe78641e95f6633f_bg.wasm" crossorigin="anonymous" integrity="sha384-8NBqdJPdayyEjDDCG1jhEss9zbRLxcEzZrHSPhmtR9S+QZ0FQFQCRxvivCV3RY7o" as="fetch" type="application/wasm"></head>
   <body>
     <canvas id="the_canvas_id"></canvas>
   </body>
