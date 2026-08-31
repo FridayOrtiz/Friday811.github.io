@@ -10,6 +10,19 @@
          browser draws a focus ring around the whole client. eframe used to set the same
          property from Rust. */
       canvas { width: 100%; height: 100%; display: block; outline: none; }
+      /* The boot readout, over the canvas until the client draws its own first frame. Painted
+         from the HTML rather than by the client, because the whole point is the minute BEFORE
+         any of the client exists; web/loading.js drives it. */
+      #boot { position: fixed; inset: 0; display: grid; place-items: center;
+              background: #0b0b0f; color: #7a829e; opacity: 1; transition: opacity 0.4s ease;
+              pointer-events: none;
+              font: 14px ui-monospace, SFMono-Regular, Menlo, monospace; }
+      #boot-inner { width: min(26em, 80vw); text-align: center; }
+      #boot-track { height: 2px; background: #1c1f2b; margin-bottom: 0.9em; }
+      /* Zero-width at rest: a bar that starts with a visible stub claims progress that has not
+         happened. Warm brass on the cold hud, the client's own accent. */
+      #boot-bar { height: 100%; width: 0; background: #c08a3e; transition: width 0.2s ease; }
+      #boot-note { line-height: 1.5; }
     </style>
     <!-- Browsers create every AudioContext SUSPENDED until a user gesture, and the audio
          stack (bevy -> rodio -> cpal) builds its context at startup — before any gesture —
@@ -47,10 +60,80 @@
     <!-- Trunk builds this crate to wasm and injects the loader. wasm-opt is off: bevy emits
          bulk-memory ops that trunk's bundled wasm-opt rejects without --enable-bulk-memory,
          and running it by hand barely moves the compressed transfer size. -->
+    <!-- `data-initializer` hands the wasm fetch to web/loading.js, which draws the boot readout
+         below: trunk streams the download through it and reports bytes against the BUILT
+         bundle's own size, which is the one figure a compressed transfer cannot supply. -->
     
 <script type="module">
-import init, * as bindings from '/game/webgl2/gui-48de547e8855aacc.js';
-const wasm = await init({ module_or_path: '/game/webgl2/gui-48de547e8855aacc_bg.wasm' });
+async function __trunkInitializer(init, source, sourceSize, initializer, initWithObject) {
+  if (initializer === undefined) {
+    return await init(initWithObject ? { module_or_path: source } : source);
+  }
+
+  const {
+    onStart, onProgress, onComplete, onSuccess, onFailure
+  } = initializer;
+
+  onStart?.();
+
+  const response = fetch(source)
+      .then((response) => {
+        const reader = response.body.getReader();
+        const headers = response.headers;
+        const status = response.status;
+        const statusText = response.statusText;
+
+        const total = sourceSize;
+        let current = 0;
+
+        const stream = new ReadableStream({
+          start(controller) {
+            function push() {
+              reader.read().then(({done, value}) => {
+                if (done) {
+                  onProgress?.({current: total, total});
+                  controller.close();
+                  return;
+                }
+
+                current += value.byteLength;
+                onProgress?.({current, total});
+                controller.enqueue(value);
+                push();
+              });
+            }
+
+            push();
+          },
+        });
+
+        return {
+          stream, init: {
+            headers, status, statusText
+          }
+        };
+      })
+      .then(({stream, init}) =>
+          new Response(stream, init),
+      );
+
+  return init(initWithObject ? { module_or_path: response } : response)
+      .then((value) => {
+        onComplete?.();
+        onSuccess?.(value);
+        return value;
+      }, (reason) => {
+        onComplete?.();
+        onFailure?.(reason);
+        return reason;
+      });
+}
+
+
+import init, * as bindings from '/game/webgl2/gui-a874f8baa81a0b08.js';
+import initializer from '/game/webgl2/d88772b8078eefd7-loading.js';
+
+const wasm = await __trunkInitializer(init, '/game/webgl2/gui-a874f8baa81a0b08_bg.wasm', 33018462, initializer(), true);
 
 
 window.wasmBindings = bindings;
@@ -82,8 +165,14 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
          these (see system_map_3d's web_audio), keeping five megabytes out of the wasm and
          the vorbis decode off the main thread. -->
     
-  <link rel="modulepreload" href="/game/webgl2/gui-48de547e8855aacc.js" crossorigin="anonymous" integrity="sha384-ptpxcR9mk22Xfjj9XHpv+zm4RDprFLRv/JAz7dCAX0yKOT3zAl4MVzGoBfxfM19+"><link rel="modulepreload" href="/game/webgl2/snippets/gui-458892a867b8c12f/inline0.js" crossorigin="anonymous" integrity="sha384-Ja02ZM8NU5x0c3nmhuhKmQ8m1IKNLfIM/lFSaI1+I6ppXrbkwhfOCuVfkQXPfUv1"><link rel="preload" href="/game/webgl2/gui-48de547e8855aacc_bg.wasm" crossorigin="anonymous" integrity="sha384-m0VdP2jf6oj8i72117WKqjPq+sWmSl5gUJ7W4IcTpEu+PQumeuSz6UCRpRN8uHNQ" as="fetch" type="application/wasm"></head>
+  <link rel="modulepreload" href="/game/webgl2/gui-a874f8baa81a0b08.js" crossorigin="anonymous" integrity="sha384-iY5cQX0wkQuE1OZYCMYltejLArXSGo0lypxZ9aRWcmwnMwQW9ab5E79vqhWC/Pj7"><link rel="modulepreload" href="/game/webgl2/snippets/gui-458892a867b8c12f/inline0.js" crossorigin="anonymous" integrity="sha384-Ja02ZM8NU5x0c3nmhuhKmQ8m1IKNLfIM/lFSaI1+I6ppXrbkwhfOCuVfkQXPfUv1"><link rel="modulepreload" href="/game/webgl2/d88772b8078eefd7-loading.js" crossorigin="anonymous" integrity="sha384-7V/CMQMntzc0M9pfy4BPEDASsoUGyKjS6cUBpJ1xm2Gg/Sq3QsR77vnuxx9qahAP"><link rel="preload" href="/game/webgl2/gui-a874f8baa81a0b08_bg.wasm" crossorigin="anonymous" integrity="sha384-fIAFRuRRx2uiqhfN4hFixe2YWa2Jcnn/9T7IqH/VMc36wamMbIeL4nh8e35/IE8V" as="fetch" type="application/wasm"></head>
   <body>
     <canvas id="the_canvas_id"></canvas>
+    <div id="boot">
+      <div id="boot-inner">
+        <div id="boot-track"><div id="boot-bar"></div></div>
+        <p id="boot-note">powering up...</p>
+      </div>
+    </div>
   </body>
 </html>
