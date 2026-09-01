@@ -130,10 +130,10 @@ async function __trunkInitializer(init, source, sourceSize, initializer, initWit
 }
 
 
-import init, * as bindings from '/game/webgl2/gui-a874f8baa81a0b08.js';
+import init, * as bindings from '/game/webgl2/gui-eaec13122ab34a36.js';
 import initializer from '/game/webgl2/d88772b8078eefd7-loading.js';
 
-const wasm = await __trunkInitializer(init, '/game/webgl2/gui-a874f8baa81a0b08_bg.wasm', 33018462, initializer(), true);
+const wasm = await __trunkInitializer(init, '/game/webgl2/gui-eaec13122ab34a36_bg.wasm', 33018880, initializer(), true);
 
 
 window.wasmBindings = bindings;
@@ -165,7 +165,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
          these (see system_map_3d's web_audio), keeping five megabytes out of the wasm and
          the vorbis decode off the main thread. -->
     
-  <link rel="modulepreload" href="/game/webgl2/gui-a874f8baa81a0b08.js" crossorigin="anonymous" integrity="sha384-iY5cQX0wkQuE1OZYCMYltejLArXSGo0lypxZ9aRWcmwnMwQW9ab5E79vqhWC/Pj7"><link rel="modulepreload" href="/game/webgl2/snippets/gui-458892a867b8c12f/inline0.js" crossorigin="anonymous" integrity="sha384-Ja02ZM8NU5x0c3nmhuhKmQ8m1IKNLfIM/lFSaI1+I6ppXrbkwhfOCuVfkQXPfUv1"><link rel="modulepreload" href="/game/webgl2/d88772b8078eefd7-loading.js" crossorigin="anonymous" integrity="sha384-7V/CMQMntzc0M9pfy4BPEDASsoUGyKjS6cUBpJ1xm2Gg/Sq3QsR77vnuxx9qahAP"><link rel="preload" href="/game/webgl2/gui-a874f8baa81a0b08_bg.wasm" crossorigin="anonymous" integrity="sha384-fIAFRuRRx2uiqhfN4hFixe2YWa2Jcnn/9T7IqH/VMc36wamMbIeL4nh8e35/IE8V" as="fetch" type="application/wasm"></head>
+  <link rel="modulepreload" href="/game/webgl2/gui-eaec13122ab34a36.js" crossorigin="anonymous" integrity="sha384-WRZk4G9zBB0YGoUG1d2C8/ZYrrkdKyt+24DevFbI9SgI5U3XxEW+ruedcCPcpCXF"><link rel="modulepreload" href="/game/webgl2/snippets/gui-458892a867b8c12f/inline0.js" crossorigin="anonymous" integrity="sha384-Ja02ZM8NU5x0c3nmhuhKmQ8m1IKNLfIM/lFSaI1+I6ppXrbkwhfOCuVfkQXPfUv1"><link rel="modulepreload" href="/game/webgl2/d88772b8078eefd7-loading.js" crossorigin="anonymous" integrity="sha384-7V/CMQMntzc0M9pfy4BPEDASsoUGyKjS6cUBpJ1xm2Gg/Sq3QsR77vnuxx9qahAP"><link rel="preload" href="/game/webgl2/gui-eaec13122ab34a36_bg.wasm" crossorigin="anonymous" integrity="sha384-gvp1DJu+To8a/Cztnzhf/NI7iP/P33bk6qQ5Aebm1kkXwxfTkC5nXtCnPXjaF2Ec" as="fetch" type="application/wasm"></head>
   <body>
     <canvas id="the_canvas_id"></canvas>
     <div id="boot">
