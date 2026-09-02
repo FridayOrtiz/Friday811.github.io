@@ -1,7 +1,7 @@
 // Cache-first asset serving for the web client, so the ~300 MB asset tree crosses the network
 // once per deploy rather than being at the mercy of whatever cache headers the host happens to
 // send. Registered by loader.html; the cache name is stamped per deploy by build-web.sh
-// (d440949 below), so a new deploy starts a fresh cache and activation sweeps the old
+// (9441cbe below), so a new deploy starts a fresh cache and activation sweeps the old
 // ones — which is the only invalidation this needs, because game assets are not content-hashed
 // (bevy fetches them by their stable paths) and would otherwise be cache-first stale for ever.
 //
@@ -18,7 +18,7 @@
 // The browser revalidates this script itself on navigation regardless of HTTP caching (the
 // spec's own rule for service workers), which is what lets the stamp below take effect.
 
-const CACHE = 'psw-d440949';
+const CACHE = 'psw-9441cbe';
 
 self.addEventListener('install', (event) => {
   // No precache; take over from any previous worker without waiting for its pages to close.
